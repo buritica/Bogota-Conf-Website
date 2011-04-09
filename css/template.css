@@ -1,0 +1,57 @@
+/*main styles*/
+body{
+	color: colors.beige;
+	background: url('../img/bg_lightgreen_noise.jpg') 0 0 repeat;
+	font-family: fonts.museo;
+}	
+
+.wrapper{
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+header{
+	height: 55px;
+	width: 100%;
+	background: colors.beige;
+
+	a#logo{
+		width:100px;
+		height:100px;
+		background:url('../img/logo_100.png') 0 0 no-repeat;
+		display: block;
+		position: absolute;
+	}
+}
+
+#main{
+	padding-top: 60px;
+}
+footer{
+	font-family: fonts.museo;
+	font-size: 12px;
+	line-height: 12px;
+	padding: 8px 0;
+
+	a{
+		font-weight: normal;
+		color: colors.beige;
+
+		&.ocho{
+			color: #000;
+		}
+
+	}
+}
+/*end main style*/
+/*typography*/
+h1{font-size: 30px;}
+h2{font-size: 26px;}
+h3{font-size: 22px;}
+h4{font-size: 18px;}
+h5{font-size: 16px;}
+h6{font-size: 14px;}
+
+/*end typography*/
+

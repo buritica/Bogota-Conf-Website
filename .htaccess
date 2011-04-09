@@ -1,0 +1,14 @@
+# Apache configuration file - from html5boilerplate.com
+# httpd.apache.org/docs/2.2/mod/quickreference.html
+
+#CodeIgniter Rules
+#		Remove index.php from url
+<IfModule mod_rewrite.c> 
+	RewriteEngine On
+	RewriteCond $1 !^(index\.php|images|robots\.txt)
+	RewriteCond %{REQUEST_URI} ^system.*
+	RewriteRule ^(.*)$ /index.php/$1 [L]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>

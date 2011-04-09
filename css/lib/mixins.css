@@ -1,0 +1,38 @@
+/*
+ *	Some CSS Mixins for Scaffold CSS 
+ *	@author: Buritica - <hello@juanpabloburitica.org>
+ *	No license, do whatever you want!!
+*/
+
+/*box-shadow*/
+@mixin box-shadow($a,$b,$c,$d){
+	box-shadow: $a $b $c $d;
+  -moz-box-shadow: $a $b $c $d; 
+  -webkit-box-shadow: $a $b $c $d;
+	behavior: url(PIE.htc);
+}
+
+/*box-shadow inset*/
+@mixin inset-shadow($a,$b){
+	-webkit-box-shadow: inset 0px 0px $a $b;
+	-moz-box-shadow: inset 0px 0px $a $b;
+	box-shadow: inset 0px 0px $a $b;	
+}
+
+/*border-radius	*/
+@mixin border-radius($a){
+	border-radius: $a;
+	-moz-border-radius: $a;
+	-webkit-border-radius: $a;
+	behavior: url(PIE.htc);
+}
+
+/*bg-gradient*/
+@mixin bg-gradient($a,$b) {
+  background: $a;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from($a), to($b));
+	background: -moz-linear-gradient($a, $b);
+	background: linear-gradient($a, $b);
+	-pie-background: linear-gradient($a, $b);
+behavior: url(PIE.htc);
+}

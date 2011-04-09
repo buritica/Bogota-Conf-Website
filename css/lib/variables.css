@@ -1,0 +1,13 @@
+/*CSS Variables*/
+
+@variables fonts{
+	neuton: 'NeutonRegular', arial, serif;
+	museo: 'MuseoSans700', arial, sans-serif;
+}
+
+@variables colors{
+	beige: #f1f1e6;
+	lightblue: #CBEAF9;
+	lightgreen: #565B37;
+	darkgreen: #2c3014;
+}

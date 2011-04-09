@@ -1,0 +1,246 @@
+body.landing{
+	
+	#transmi-outer{
+		width: 100%;
+		margin: 0 auto;
+		position: absolute;
+		top: 465px;
+		overflow: hidden;
+		z-index: 1;
+		
+		#transmi-inner{
+			width: 240%;
+			height:54px;
+			background:url('../img/bg_transmi.png') 50% 0 no-repeat;
+		}
+	}
+	
+	#flash{
+		background: colors.beige;
+		color: colors.lightgreen;
+		font-family: fonts.neuton;
+		font-size: 22px;
+		line-height: 22px;
+		position: fixed;
+		z-index: 200;
+		top: 0;
+		width: 100%;
+		
+		.wrapper{
+			padding: 15px 0;
+			text-align: center;
+			display: none;
+
+			
+			&.show{
+				display: block;
+			}
+		}
+	}
+	header#weather{
+		height: 419px;
+		width: 100%;
+		background: url('../img/bg_sky_day.jpg') 50% 0 repeat-x;
+		
+		&.night{
+			background: url('../img/bg_sky_night.jpg') 50% 0 repeat-x;
+			
+			&.rain{
+				background: url('../img/bg_sky_night_rain.jpg') 50% 0 repeat-x;
+			}
+			
+			&.gray{
+				background: url('../img/bg_sky_night_gray.jpg') 50% 0 repeat-x;
+			}
+		}
+		
+		&.gray{
+			background: url('../img/bg_sky_gray.jpg') 50% 0 repeat-x;
+		}
+		
+		&.rain{
+			background: url('../img/bg_sky_rain.jpg') 50% 0 repeat-x;
+		}
+		
+		&.dusk{
+			background: url('../img/bg_sky_dusk.jpg') 50% 0 repeat-x;
+			
+			&.rain{
+				background: url('../img/bg_sky_dusk.jpg') 50% 0 repeat-x;
+			}
+			
+			&.gray{
+				background: url('../img/bg_sky_dusk.jpg') 50% 0 repeat-x;
+			}
+		}
+		
+		#clouds{
+			width: 100%;
+			overflow: hidden;
+			position: relative;
+			left: 0;
+			height: 419px;
+			margin-bottom: -419px;
+			
+			.inner{
+				height:419px;
+				width: 6400px;
+				position: relative;	
+			}
+			.double{
+				height:419px;
+				width: 6400px;
+				position: relative;
+				top: -419px;
+			}
+			
+			&.clouds{
+				.inner{
+					background: url('../img/bg_clouds.png') 50% 0;
+				}
+				
+				.double{
+					background: url('../img/bg_clouds_double.png') 65% 0;
+				}
+			}
+		}
+			
+		.wrapper{
+			padding: 0;
+			top: 60px;
+			position: relative;
+			height: 120%;
+			
+			
+			#city{
+				width: 140px;
+				height: 167px;
+				background:url('../img/bg_city.png') 0 0 no-repeat;
+				position: absolute;
+				left: 770px;
+				top: 355px;
+/*				z-index: 10;*/
+			}
+		}
+	}
+	
+	
+	#main{
+		padding-top: 45px;
+		
+		.left-info{
+			float: left;
+			width: 470px;
+			padding-left: 10px;
+			
+			.bogconf{
+				width: 432px;
+				height: 70px;
+				background: url('../img/text_bogotaconf.png') 0 0 no-repeat;
+				z-index: 10;
+				position: relative;
+			}
+			
+			.desc{
+				font-family: fonts.neuton;
+				font-size: 34px;
+				line-height: 34px;
+				margin-top: 10px;
+			}
+		}
+		
+		.right-info{
+			float: left;
+			width: 360px;
+			margin-left: 110px;
+			
+			.desc{
+				font-family: fonts.neuton;
+				font-size: 26px;
+				line-height: 26px;
+				margin-top: 89px;
+			}
+		}
+		
+		#dark-green{
+			margin-top: 20px;
+			width: 100%;
+/*			height: 236px;*/
+			background: url('../img/bg_darkgreen_noise.jpg') 0 0 repeat;
+			padding-bottom: 20px;
+		}
+		
+		.module-icons{
+			width: 361px;
+			height:142px;
+			margin-top: 42px;
+			background: url('../img/icons_modules.png') 0 0 no-repeat;
+		}
+		
+		.more-info, .twitter-info{
+			font-family: fonts.neuton;
+			font-size: 18px;
+			line-height: 22px;
+			margin-top: 20px;
+		}
+		
+		a.twitter-follow, .twitter-follow{
+			font-family: fonts.neuton;
+			color: colors.beige;
+			font-size: 20px;
+			line-height: 22px;
+			margin-top: 10px;
+			display: block;
+			font-weight: normal;
+			text-align:right;
+			text-decoration: none;
+			
+			&:hover{
+				color: colors.lightgreen;
+			}
+		}
+		
+		form{
+			margin-top: 25px;
+			input[type="email"], input[type="text"]{
+				width: 247px;
+				height:40px;
+				padding: 0;
+				color: colors.darkgreen;
+				font-family: fonts.neuton;
+				font-size: 14px;
+				padding: 0 0 0 13px;
+				line-height: 40px;
+				border: none;
+			}
+			input[type="submit"]{
+				height: 40px;
+				width: 95px;
+				text-align: center;
+				color: colors.darkgreen;
+				background: colors.lightgreen;
+				border:none;
+				font-family: fonts.museo;
+				font-size: 18px;
+				text-transform: uppercase;
+				
+				&:hover{
+					color: colors.beige;
+				}
+
+			}
+			input::-webkit-input-placeholder {
+			   	color: colors.darkgreen;
+				font-family: fonts.neuton;
+				font-size: 14px;
+			}
+			
+			input:-moz-placeholder{
+			   	color: colors.darkgreen;
+				font-family: fonts.neuton;
+				font-size: 14px;
+				line-height: 40px;
+			}
+		}
+	}
+}
