@@ -4,4 +4,6 @@ application/logs
 g*.html
 
 #keep empty folders with .gitkeep
-!.gitkeep 
+!application/libraries/scaffold/cache/index.html
+!application/cache/index.html
+!application/logs/index.html
