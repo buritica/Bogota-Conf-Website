@@ -1,3 +1,4 @@
 application/libraries/scaffold/cache/
 application/cache
 application/logs
+g*.html
