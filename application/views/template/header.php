@@ -15,7 +15,7 @@ if(!defined('BASEPATH')) exit('No direct script access allowed');
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
-	<title>Tres d&iacute;as dedicados al desarrollo web y m&oacute;vil. | Bogotaconf 2011</title>
+	<title><?php if(isset($title)) : echo $title.' |'; endif; ?> Bogotaconf 2011</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 	
