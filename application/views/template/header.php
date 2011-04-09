@@ -24,6 +24,8 @@ if(!defined('BASEPATH')) exit('No direct script access allowed');
 	
 	<link rel="shortcut icon" href="<?php echo base_url() ?>favicon.ico">
 	<link rel="apple-touch-icon" href="<?php echo base_url() ?>apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-retina.png" />
 	<link rel="stylesheet" href="<?php echo base_url() ?>css/style.css?v=2">
 	<link rel="stylesheet" media="handheld" href="<?php echo base_url() ?>css/handheld.css?v=2">
 	<script src="<?php echo base_url() ?>js/libs/modernizr-1.7.min.js"></script>
