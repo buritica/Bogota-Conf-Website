@@ -2,3 +2,6 @@ application/libraries/scaffold/cache/
 application/cache
 application/logs
 g*.html
+
+#keep empty folders with .gitkeep
+!.gitkeep 
