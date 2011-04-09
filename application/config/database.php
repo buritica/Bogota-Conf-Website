@@ -78,9 +78,9 @@ $db['dev']['dbcollat'] = "utf8_general_ci";
 
 //live server
 $db['live']['hostname'] = "localhost";
-$db['live']['username'] = "";
-$db['live']['password'] = "";
-$db['live']['database'] = "";
+$db['live']['username'] = "bogotaconf";
+$db['live']['password'] = "Bogota1357!";
+$db['live']['database'] = "bogotaconf_prod";
 $db['live']['dbdriver'] = "mysql";
 $db['live']['dbprefix'] = "";
 $db['live']['pconnect'] = TRUE;
