@@ -3,6 +3,7 @@
 	<h6 class="museo">¿Quieres ser parte de bogotaconf? Escr&iacute;benos a hola [a] bogotaconf.co.</h6>
 	<ul id="friends">
 		<li><a href="http://twitter.com/#!/oscarantolinez" target="_blank">@oscarantolinez</a></li>
+		<li><a href="http://twitter.com/#!josedaniel" target="_blank">@josedaniel</a></li>
 	</ul>
 	<h3>En bogotaconf usamos:</h3>
 	<ul id="friends">
