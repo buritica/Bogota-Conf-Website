@@ -1,5 +1,6 @@
 <div class="wrapper">
-	<h2>Estas personas nos ayudan en la organizaci&oacute;n de bogotaconf 2011</h2>
+	<h2>Estas personas nos ayudan en la organizaci&oacute;n de bogot&aacute;conf 2011</h2>
+	<h6 class="museo">¿Quieres ser parte de bogotaconf? Escr&iacute;benos a hola [a] bogotaconf.co.</h6>
 	<ul id="friends">
 		<li><a href="http://twitter.com/#!/oscarantolinez" target="_blank">@oscarantolinez</a></li>
 	</ul>
