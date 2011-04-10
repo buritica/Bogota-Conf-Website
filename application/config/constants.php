@@ -13,7 +13,7 @@
 if(strpos($_SERVER['SERVER_NAME'], 'local') !== FALSE || strpos($_SERVER['SERVER_NAME'], '192.') !== FALSE){ 
 	define('ENV', 'local'); 
 }elseif(strpos($_SERVER['SERVER_NAME'], 'dev.') === 0){
-	define('ENV', 'dev'); 
+	define('ENV', 'dev');
 }else{
 	define('ENV', 'live');
 }

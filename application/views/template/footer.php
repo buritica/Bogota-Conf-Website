@@ -22,18 +22,10 @@ if(!defined('BASEPATH')) exit('No direct script access allowed');
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script>!window.jQuery && document.write(unescape('%3Cscript src="<?php echo base_url(); ?>js/libs/jquery-1.5.1.min.js"%3E%3C/script%3E'))</script>
 
-<?php
-if(ENV == 'local'){
-	$config['production'] = false;
-}elseif(ENV == 'dev'){
-	$config['production'] = false;
-}elseif(ENV == 'live'){
-	$config['production'] = true;
-}
-?>
-
-<script src="<?php echo base_url(); ?>js/plugins.js"></script>
-<script src="<?php echo base_url(); ?>js/script.js"></script>
+<!-- scripts concatenated and minified via ant build script-->
+<script src="<?php echo base_url() ?>js/plugins.js"></script>
+<script src="<?php echo base_url() ?>js/script.js"></script>
+<!-- end scripts-->
 
 </body>
 </html>

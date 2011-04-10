@@ -1,9 +1,11 @@
+#logs, cache and google files
 application/libraries/scaffold/cache/
 application/cache
 application/logs
 g*.html
 
-#keep empty folders with .gitkeep
-!application/libraries/scaffold/cache/index.html
-!application/cache/index.html
-!application/logs/index.html
+#ant config
+build/config/buildinfo.properties
+
+#ant publish
+publish/

@@ -5,6 +5,9 @@ class Main extends CI_Controller {
 
 	public function index()
 	{	
+		echo '<pre>';
+		var_dump($_SERVER);
+		echo '</pre>';
 		$data->title = 'Tres d&iacute;as dedicados al desarrollo web y m&oacute;vil.';
 		$data->time_class = $this->day_or_night(); //css classes day or night;
 		$data->body_class = 'landing'; //css classes for the body
