@@ -9,6 +9,25 @@
  */
 $system = '../application/libraries/scaffold';
 
+/*
+|--------------------------------------------------------------------------
+| Environments
+|--------------------------------------------------------------------------
+|
+| different server environments
+| use as if(ENV == 'live') in configs
+|
+*/
+
+if(strpos($_SERVER['SERVER_NAME'], 'local') !== FALSE || strpos($_SERVER['SERVER_NAME'], '192.') !== FALSE){ 
+	define('ENV', 'local'); 
+}elseif(strpos($_SERVER['SERVER_NAME'], 'dev.') === 0){
+	define('ENV', 'dev'); 
+}else{
+	define('ENV', 'live');
+}
+
+
 /**
  * Production Mode
  *
@@ -19,7 +38,16 @@ $system = '../application/libraries/scaffold';
  *		1. One of the files in the request has changed
  *		2. The cache lifetime has expired (set below)
  */
-$config['production'] = false;
+
+if(ENV == 'local'){
+	$config['production'] = false;
+}elseif(ENV == 'dev'){
+	$config['production'] = false;
+}elseif(ENV == 'live'){
+	$config['production'] = true;
+}
+
+
 
 /**
  * Cache Lifetime

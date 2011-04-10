@@ -1,5 +1,7 @@
 body.landing{
-	
+	.wrapper{
+		padding-bottom: 10px;
+	}
 	#transmi-outer{
 		width: 100%;
 		margin: 0 auto;

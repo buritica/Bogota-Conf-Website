@@ -38,10 +38,10 @@ footer{
 		font-weight: normal;
 		color: colors.beige;
 
-		&.ocho{
-			color: #000;
-		}
-
+	}
+	
+	.wrapper{
+		padding: 10px 0;
 	}
 }
 /*end main style*/
@@ -54,4 +54,11 @@ h5{font-size: 16px;}
 h6{font-size: 14px;}
 
 /*end typography*/
+ul#friends{
+	list-style-type: none;
+	min-height: 200px;
+	margin-top: 45px;
+	font-size: 18px;
+	line-height: 1.4em;
 
+}

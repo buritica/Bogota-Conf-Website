@@ -26,7 +26,7 @@
 			<p class="twitter-info">
 				O si quieres, s&iacute;guenos en twitter:
 			</p>
-			<a href="http://twitter.com/bogotaconf" target="_blank" class="twitter-follow">@bogotaconf</a>
+			<a href="http://twitter.com/#!/bogotaconf" target="_blank" class="twitter-follow">@bogotaconf</a>
 		</div>
 	</div>
 </div>

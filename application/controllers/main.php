@@ -21,12 +21,18 @@ class Main extends CI_Controller {
 			$u->save();
 		
 			if($u->id){
-				$message = ':) Gracias, ya tenemos tu mail, apenas tengamos mas información te contamos.';
+				$message = ':) Gracias, ya tenemos tu mail, apenas tengamos mas información te contamos, siguenos en @bogotaconf';
+				
+				//send notification
+				$data->email = $this->input->post('email');
+				user_notify_postmark('email/maillist', 'Hemos guardado tu email.', $this->input->post('email'), $data);
+				
 			}else{
-				$message = ':( No pudimos guardar tu email, porfavor intenta de nuevo.';
+				$message = ':( No pudimos guardar tu email, porfavor intenta de nuevo';
 			}
 			
 			if(is_ajax()){
+
 				echo json_encode(array('message'=>$message));
 			}else{
 				$this->session->set_flashdata('message',$message);
@@ -37,12 +43,19 @@ class Main extends CI_Controller {
 		}
 	}
 	
+	//friends page
 	public function friends(){
 		
 		$data->title = 'Amigos de Bogotaconf';
 		$data->time_class = $this->day_or_night(); //css classes day or night;
 		$data->main_content = 'friends';
 		$this->load->view('template/main', $data);
+	}
+	
+	protected function email($email){
+		
+		$data->email = $email;
+		user_notify_postmark('email/maillist', 'Hemos guardado tu email.', $email, $data);
 	}
 	
 	protected function day_or_night()

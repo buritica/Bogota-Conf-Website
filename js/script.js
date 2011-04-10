@@ -51,8 +51,8 @@ $(function(){
 	}
 	
 	bconf.transmiAnimate = function(){
-		bconf.layer.transmi.scrollLeft(0).animate({scrollLeft: bconf.transmi.step1}, 2000, 'easeOutExpo', function(){
-			$(this).delay(1000).animate({scrollLeft: bconf.status.windowWidth+600}, 1000, 'easeOutExpo', function(){
+		bconf.layer.transmi.scrollLeft(0).animate({scrollLeft: bconf.transmi.step1}, 5000, 'easeOutExpo', function(){
+			$(this).delay(1000).animate({scrollLeft: bconf.status.windowWidth+600}, 2000, 'easeOutExpo', function(){
 				window.setTimeout(function(){
 					bconf.transmiAnimate();
 				},6000);
@@ -102,8 +102,16 @@ $(function(){
 			}else{
 					$.post(bconf.baseUrl+'store_email/', $(this).serialize(), function(data){
 						$('#flash .wrapper').html(data.message).slideDown().delay(3000).slideUp();
-						console.log(data);
+						email.val(':)');
 					}, 'json');
+					
+						email.focus(function(){
+							$(this).val('');
+						}).blur(function(){
+							if($(this).val() == ''){
+								$(this).val('No somos amigos del spam');
+							}
+						});
 			}
 			return false;
 		});
