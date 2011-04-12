@@ -4,7 +4,7 @@
 		<p class="desc">Tres días dedicados al desarrollo web y móvil.</p>
 	</div>
 	<div class="right-info">
-		<p class="desc">Octubre, 2011. Bogotá, Colombia.</p>
+		<p class="desc">26, 27 y 28 de Octubre, 2011. Bogotá, Colombia.</p>
 	</div>	
 </div>
 <div id="dark-green">
