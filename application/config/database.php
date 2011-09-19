@@ -64,9 +64,9 @@ $db['local']['dbcollat'] = "utf8_general_ci";
 
 //dev server
 $db['dev']['hostname'] = "localhost";
-$db['dev']['username'] = "";
-$db['dev']['password'] = "";
-$db['dev']['database'] = "";
+$db['dev']['username'] = "bogotaconf";
+$db['dev']['password'] = "Bogota1357!";
+$db['dev']['database'] = "bogotaconf_prod";
 $db['dev']['dbdriver'] = "mysql";
 $db['dev']['dbprefix'] = "";
 $db['dev']['pconnect'] = TRUE;

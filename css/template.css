@@ -27,6 +27,10 @@ header{
 
 #main{
 	padding-top: 60px;
+	
+	p,ul{
+		margin-bottom: 12px;
+	}
 }
 footer{
 	font-family: fonts.museo;

@@ -17,7 +17,7 @@ if(!defined('BASEPATH')) exit('No direct script access allowed');
 	
 	<title><?php if(isset($title)) : echo $title.' |'; endif; ?> Bogotaconf 2011</title>
 	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="author" content="Juan Pablo Buritica">
 	
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 	<meta name="apple-mobile-web-app-capable" content="yes">

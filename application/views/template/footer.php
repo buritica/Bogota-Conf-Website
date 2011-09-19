@@ -11,9 +11,7 @@ if(!defined('BASEPATH')) exit('No direct script access allowed');
 	<footer>
 		<div class="wrapper">
 			<p>
-				bogotaconf es un evento SIN ANIMO DE LUCRO - organizado por 
-				<a href="http://twitter.com/#!/buritica">@buritic&aacute;</a> <a href="http://twitter.com/8manos" class="ocho">(∞m)</a>, 
-				<a href="http://twitter.com/#!/heyanabelle">@heyanabelle</a> <a href="http://twitter.com/8manos" class="ocho">(∞m)</a> y la colaboraci&oacute;n de <a href="<?php echo base_url() ?>amigos">amigos.</a> - hola [a] bogotaconf.co
+				bogotaconf es un evento SIN ANIMO DE LUCRO
 			</p>
 		</div>
 	</footer>
