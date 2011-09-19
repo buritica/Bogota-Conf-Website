@@ -16,6 +16,7 @@
 */
 if(ENV == 'local'){
 	$config['base_url']	= "/bconf/";
+	date_default_timezone_set('America/New_York');
 }elseif(ENV == 'dev'){
 	$config['base_url']	= "http://dev.bogotaconf.co/";
 }elseif(ENV == 'live'){
