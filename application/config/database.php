@@ -49,6 +49,21 @@ if(ENV == 'local'){
 
 $active_record = TRUE;
 //local server
+$db['giovanny']['hostname'] = "giovannyhost";
+$db['giovanny']['username'] = "giovanny";
+$db['giovanny']['password'] = "";
+$db['giovanny']['database'] = "bogotaconf";
+$db['giovanny']['dbdriver'] = "mysql";
+$db['giovanny']['dbprefix'] = "";
+$db['giovanny']['pconnect'] = TRUE;
+$db['giovanny']['db_debug'] = TRUE;
+$db['giovanny']['cache_on'] = FALSE;
+$db['giovanny']['cachedir'] = "";
+$db['giovanny']['char_set'] = "utf8";
+$db['giovanny']['dbcollat'] = "utf8_general_ci";
+
+$active_record = TRUE;
+//local server
 $db['local']['hostname'] = "localhost";
 $db['local']['username'] = "local";
 $db['local']['password'] = "";

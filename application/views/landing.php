@@ -1,24 +1,26 @@
 <div class="wrapper">
 	<div class="left-info">
-		<h1 class="ir bogconf">Bogotaconf 2011</h1>
+		<h1 class="ir bogconf">Bogot&aacute;conf 2011</h1>
 		<p class="desc">La primera conferencia de programaci&oacute;n en Bogot&aacute;.</p>
+		<p class="subdesc">Bogot&aacute;Conf es un evento dedicado a la programaci&oacuten web y m&oacute;vil</p>
 	</div>
 	<div class="right-info">
 		<p class="desc">1ro de Noviembre, 2011. Bogotá, Colombia.</p>
 		<ul class="cost">
-			<li>50 Cupos de Estudiantes</li>
+			<li>50 Cupos para Estudiantes</li>
 			<li>100 Cupos para Profesionales</li>
 		</ul>
 		<p>Antes del 10 de Octubre</p>
 		<ul class="cost">
 			<li>Estudiantes: $70,000</li>
-			<li>Profesionales: $130,000 </li>
+			<li>Profesionales: $130,000</li>
 		</ul>
 		<p>Despues del 10 al 30 de Octubre</p>
 		<ul class="cost">
 			<li>Estudiantes: $90,000</li>
 			<li>Profesionales: $150,000</li>
 		</ul>
+		<p>Entradas profesionales a la venta en <a href="http://bogotaconf.eventbrite.com">Eventbrite</a></p>
 	</div>	
 </div>
 <div id="dark-green">
