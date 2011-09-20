@@ -103,8 +103,9 @@ body.home{
 	
 	
 	#main{
-		padding-top: 15px;
-		
+		.title{
+			margin-bottom: 30px;
+		}
 		.bogconf{
 			width: 432px;
 			height: 70px;
@@ -118,6 +119,69 @@ body.home{
 			font-size: 26px;
 			line-height: 34px;
 			margin-top: 10px;
+		}
+		
+		.speaker{
+			overflow: hidden;
+			border-top: 2px solid colors.beige;
+			margin-top: 15px;
+			padding-top: 20px;
+			
+			.avatar{
+				width: 220px;
+				height: 150px;
+				float: left;
+				margin-right: 20px;
+				position: relative;
+				
+				.twitter{
+					width: 31px;
+					height: 32px;
+					background: url('../img/icon_twitter.png') 0 0 no-repeat;
+					display: inline-block;
+					opacity: .8;
+					position: absolute;
+					bottom: 10px;
+					right: 10px;
+					
+					&:hover{
+						opacity: 1;
+					}
+				}
+				
+				&.tpreston{
+					background: url('../img/bio_tpreston.jpg') 0 0 no-repeat;
+				}
+				&.pirish{
+					background: url('../img/bio_pirish.jpg') 0 0 no-repeat;
+				}
+			}
+			
+			.bio{
+				width: 340px;
+				float: left;
+				h3.name{
+					font-family: fonts.museo;
+					font-size: 28px;
+					width: 340px;
+					margin-top: 0;
+
+				}
+				h5.talk{
+					font-family: fonts.museo;
+					color: colors.lightergreen;
+					font-size: 12px;
+				}
+			}
+			
+		}
+		#sponsors{
+			p{
+				margin-left: 15px;
+			}
+			ul{
+				margin-left: 30px;
+			}
 		}
 	}
 }
