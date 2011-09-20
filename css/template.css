@@ -11,6 +11,29 @@ body{
 	overflow: hidden;
 }
 
+#flash{
+	background: colors.beige;
+	color: colors.lightgreen;
+	font-family: fonts.neuton;
+	font-size: 22px;
+	line-height: 22px;
+	position: fixed;
+	z-index: 200;
+	top: 0;
+	width: 100%;
+	
+	.wrapper{
+		padding: 15px 0;
+		text-align: center;
+		display: none;
+
+		
+		&.show{
+			display: block;
+		}
+	}
+}
+
 header{
 	height: 55px;
 	width: 100%;
@@ -32,6 +55,40 @@ header{
 		margin-bottom: 12px;
 	}
 }
+
+
+nav.main-nav{
+	background: #22260f;
+	height: 30px;
+	padding: 10px 0;
+	
+	a{
+		font-size: 18px;
+		text-decoration: none;
+		font-weight: 100;
+		line-height: 30px;
+		color: colors.lightgreen;
+		&:hover{
+			color: colors.beige;
+		}
+		
+		&.active{
+			color: colors.beige;			
+		}
+	}
+	
+}
+
+
+
+#dark-green{
+/*	margin-top: 20px;*/
+	width: 100%;
+/*	height: 236px;*/
+	background: url('../img/bg_darkgreen_noise.jpg') 0 0 repeat;
+	padding-bottom: 20px;
+}
+
 footer{
 	font-family: fonts.museo;
 	font-size: 12px;
@@ -58,11 +115,3 @@ h5{font-size: 16px;}
 h6{font-size: 14px;}
 
 /*end typography*/
-ul#friends{
-	list-style-type: none;
-	min-height: 200px;
-	margin-top: 45px;
-	font-size: 18px;
-	line-height: 1.4em;
-
-}

@@ -1,0 +1,123 @@
+body.home{
+	#transmi-outer{
+		width: 100%;
+		margin: 0 auto;
+		position: absolute;
+		top: 220px;
+		overflow: hidden;
+		z-index: 1;
+		
+		#transmi-inner{
+			width: 240%;
+			height:54px;
+			background:url('../img/bg_transmi.png') 50% 0 no-repeat;
+		}
+	}
+	
+	header#weather{
+		height: 200px;
+		width: 100%;
+		background: url('../img/bg_sky_day.jpg') 50% 100% repeat-x;
+		
+		&.night{
+			background: url('../img/bg_sky_night.jpg') 50% 100% repeat-x;
+			
+			&.rain{
+				background: url('../img/bg_sky_night_rain.jpg') 50% 100% repeat-x;
+			}
+			
+			&.gray{
+				background: url('../img/bg_sky_night_gray.jpg') 50% 100% repeat-x;
+			}
+		}
+		
+		&.gray{
+			background: url('../img/bg_sky_gray.jpg') 50% 100% repeat-x;
+		}
+		
+		&.rain{
+			background: url('../img/bg_sky_rain.jpg') 50% 100% repeat-x;
+		}
+		
+		&.dusk{
+			background: url('../img/bg_sky_dusk.jpg') 50% 100% repeat-x;
+			
+			&.rain{
+				background: url('../img/bg_sky_dusk.jpg') 50% 100% repeat-x;
+			}
+			
+			&.gray{
+				background: url('../img/bg_sky_dusk.jpg') 50% 100% repeat-x;
+			}
+		}
+		
+		#clouds{
+			width: 100%;
+			overflow: hidden;
+			position: relative;
+			left: 0;
+			height: 200px;
+			margin-bottom: -280px;
+			
+			.inner{
+				height:200px;
+				width: 6400px;
+				position: relative;	
+			}
+			.double{
+				height:200px;
+				width: 6400px;
+				position: relative;
+				top: -280px;
+			}
+			
+			&.clouds{
+				.inner{
+					background: url('../img/bg_clouds.png') 50% 100%;
+				}
+				
+				.double{
+					background: url('../img/bg_clouds_double.png') 65% 100%;
+				}
+			}
+		}
+			
+		.wrapper{
+			padding: 0;
+			top: 60px;
+			position: relative;
+			height: 340px;
+			
+			
+			#city{
+				width: 140px;
+				height: 167px;
+				background:url('../img/bg_city.png') 0 0 no-repeat;
+				position: absolute;
+				left: 770px;
+				top: 190px;
+				z-index: 10;
+			}
+		}
+	}
+	
+	
+	#main{
+		padding-top: 15px;
+		
+		.bogconf{
+			width: 432px;
+			height: 70px;
+			background: url('../img/text_bogotaconf.png') 0 0 no-repeat;
+			z-index: 10;
+			position: relative;
+		}
+		
+		.tagline{
+			font-family: fonts.neuton;
+			font-size: 26px;
+			line-height: 34px;
+			margin-top: 10px;
+		}
+	}
+}

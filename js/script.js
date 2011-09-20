@@ -1,6 +1,8 @@
 //vars
 var bconf = {
-	layer:{},
+	layer:{
+		body: $('body')
+	},
 	status:{},
 	findInArray: function(arr,obj) {
 	    return (arr.indexOf(obj) != -1);
@@ -118,15 +120,15 @@ $(function(){
 	}();
 	
 	//landingpage script
-	if($('body').hasClass('landing')){
+	if(bconf.layer.body.hasClass('home')){
 		bconf.transmiAnimate();
 		bconf.weatherAnimate();
 		bconf.weatherAnimateDouble();
 		
 		//weather
-	 	$.get('http://free.worldweatheronline.com/feed/weather.ashx?q=Bogota&format=json&num_of_days=1&key=3105835f23235510110804',function(weather){
-			 bconf.setWeather(weather.data.current_condition[0].weatherCode);
-		},'jsonp');	
+		// 	 	$.get('http://free.worldweatheronline.com/feed/weather.ashx?q=Bogota&format=json&num_of_days=1&key=3105835f23235510110804',function(weather){
+		// 	 bconf.setWeather(weather.data.current_condition[0].weatherCode);
+		// },'jsonp');	
 
 		//modernizr
 		// if placeholder isn't supported:
