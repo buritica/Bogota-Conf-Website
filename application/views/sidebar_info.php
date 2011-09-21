@@ -12,7 +12,7 @@
 	<ul class="cost">
 		<li>$130,000 antes del 10 de Oct</li>
 		<li>$150,000 hasta el 30 de Oct.</li>
-		<li>Entradas profesionales a la venta en <a href="http://bogotaconf.eventbrite.com" target="_blank">Eventbrite</a></li>
+		<li>Entradas profesionales a la venta esta tarde, en <a href="http://bogotaconf.eventbrite.com" target="_blank">Eventbrite</a></li>
 	</ul>
 	<h4>&iquest;Donde?</h4>
 	<p>Por confirmar</p>
