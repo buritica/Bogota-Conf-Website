@@ -58,10 +58,10 @@
 			<a href="http://twitter.com/#!/hgimenez" target="_blank" class="twitter"></a>
 		</div>
 		<div class="bio">
-			<h3 class="name">Harold Gimenez</h3>
+			<h3 class="name">Harold Gim&eacute;nez</h3>
 			<h5 class="talk">Construyendo Suites de Pruebas Mantenibles</h5>
-			<p>Desarrollador Web para <a href="http://thoughtbot.com/" target="_blank">Thoughtbot</a> en Boston. Es un miembro bastante activo en la comunidad Ruby on Rails y apasionade del "Test Driven Development".</p>
-<p> Actualmente est&aacute; trabajando en el desarrollo de <a href="http://bestdamnburger.com/" target="_blank">bestdamnburger.com</a>
+			<p>Desarrollador Web para <a href="http://thoughtbot.com/" target="_blank">thoughtbot</a> en Boston. Es un miembro bastante activo en la comunidad Ruby on Rails y apasionade del "Test Driven Development".</p>
+<p> En su tiempo libre est&aacute; trabajando en el desarrollo de <a href="http://bestdamnburger.com/" target="_blank">bestdamnburger.com</a>
 		</div>				
 	</div>
 </div>
