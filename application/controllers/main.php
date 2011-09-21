@@ -5,7 +5,17 @@ class Main extends CI_Controller {
 
 	public function index()
 	{	
-		conferencistas();
+		if(!is_ajax()){
+			$data->title = 'La primera conferencia de programaci&oacute;n en Bogot&aacute;.';
+			$data->time_class = $this->day_or_night(); //css classes day or night;
+			$data->main_class = 'home'; //css classes for the body
+			$data->body_class = 'weather';
+			$data->left_content = 'speakers';
+			$data->sidebar = 'sidebar_info';
+			$this->load->view('template/columns_animated', $data);
+		}else{
+			$this->load->view('speakers');
+		}
 	}
 	
 	public function conferencistas(){
@@ -32,7 +42,7 @@ class Main extends CI_Controller {
 			$data->sidebar = 'sidebar_info';
 			$this->load->view('template/columns_animated', $data);
 		}else{
-			$this->load->view('speakers');
+			$this->load->view('panelists');
 		}
 	}
 	
