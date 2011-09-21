@@ -13,6 +13,7 @@ bconf.layer.transmi = $('#transmi-outer');
 bconf.layer.header = $('#weather');
 bconf.layer.clouds = $('#clouds');
 bconf.layer.leftContent = $('#left-content .load');
+bconf.layer.sidebar = $('#sidebar');
 bconf.status.windowWidth = $(window).width();
 bconf.transmi = {step1: bconf.status.windowWidth*.9 };
 //weather codes
@@ -153,7 +154,7 @@ bconf.noRequired = function(){
 }();
 
 
-$(function(){
+$(document).ready(function(){
 	//hide flashmessage
 	$('#flash .show').delay(3000).slideUp();
 	
@@ -178,7 +179,7 @@ $(function(){
 		// 	    }
 	}
 
-
+	bconf.layer.sidebar.height(bconf.layer.leftContent.height());
 	
 	
 });
