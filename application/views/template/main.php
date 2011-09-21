@@ -15,7 +15,7 @@ if(!defined('BASEPATH')) exit('No direct script access allowed');
 			<a href="<?php echo base_url() ?>" id="logo"></a>
 		</div>
 	</header>
-	<div id="main" role="main">
+	<div id="main" role="main" <?php if(isset($main_class)) : echo 'class="'.$main_class.'"'; endif; ?>>
 		<?php $this->load->view($main_content); ?>
 	</div>
 	<?php $this->load->view('template/footer'); ?>

@@ -7,9 +7,14 @@ class Main extends CI_Controller {
 	{	
 		$data->title = 'La primera conferencia de programaci&oacute;n en Bogot&aacute;.';
 		$data->time_class = $this->day_or_night(); //css classes day or night;
-		$data->body_class = 'home'; //css classes for the body
+		$data->main_class = 'home'; //css classes for the body
+		$data->body_class = 'weather';
 		$data->main_content = 'home';
 		$this->load->view('template/main_animated', $data);
+	}
+	
+	public function speakers(){
+		$data->title = 'La primera conferencia de programaci&oacute;n en Bogot&aacute;.';
 	}
 	
 	public function store_email(){
