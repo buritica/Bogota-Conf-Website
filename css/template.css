@@ -158,12 +158,29 @@ header{
 		margin-bottom: 12px;
 	}
 	
+	.title{
+		margin-bottom: 30px;
+	}
+	.bogconf{
+		width: 432px;
+		height: 70px;
+		background: url('../img/text_bogotaconf.png') 0 0 no-repeat;
+		z-index: 10;
+		position: relative;
+	}
+	
+	.tagline{
+		font-family: fonts.neuton;
+		font-size: 26px;
+		line-height: 34px;
+		margin-top: 10px;
+	}	
 }
 
 
 nav.main-nav{
 	background: #22260f;
-	height: 0;
+	height: 30px;
 	padding: 10px 0;
 	margin-top: 15px;
 	
@@ -172,7 +189,10 @@ nav.main-nav{
 		text-decoration: none;
 		font-weight: 100;
 		line-height: 30px;
-		color: colors.lightgreen;
+		color: colors.lightergreen;
+		display: inline-block;
+		padding-right: 20px;
+		
 		&:hover{
 			color: colors.beige;
 		}
@@ -198,14 +218,14 @@ nav.main-nav{
 		}
 	}
 	
-	.content-left{
+	#left-content{
 		width: 580px;
 		margin-right: 20px;
 		float: left;
 		padding:20px 0;
 	}
 	
-	.side-bar{
+	#sidebar{
 		width:300px;
 		float: left;
 		padding: 20px;

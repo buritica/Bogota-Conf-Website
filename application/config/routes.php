@@ -39,11 +39,10 @@
 */
 
 $route['default_controller'] = "main";
-$route['404_override'] = '';
+$route['404_override'] = 'main';
 
 //custom routes
-$route['store_email'] = 'main/store_email';
-$route['amigos'] = 'main/friends';
+$route['(:any)'] = "main/$1";
 
 
 /* End of file routes.php */

@@ -5,16 +5,35 @@ class Main extends CI_Controller {
 
 	public function index()
 	{	
-		$data->title = 'La primera conferencia de programaci&oacute;n en Bogot&aacute;.';
-		$data->time_class = $this->day_or_night(); //css classes day or night;
-		$data->main_class = 'home'; //css classes for the body
-		$data->body_class = 'weather';
-		$data->main_content = 'home';
-		$this->load->view('template/main_animated', $data);
+		conferencistas();
 	}
 	
-	public function speakers(){
-		$data->title = 'La primera conferencia de programaci&oacute;n en Bogot&aacute;.';
+	public function conferencistas(){
+		if(!is_ajax()){
+			$data->title = 'La primera conferencia de programaci&oacute;n en Bogot&aacute;.';
+			$data->time_class = $this->day_or_night(); //css classes day or night;
+			$data->main_class = 'home'; //css classes for the body
+			$data->body_class = 'weather';
+			$data->left_content = 'speakers';
+			$data->sidebar = 'sidebar_info';
+			$this->load->view('template/columns_animated', $data);
+		}else{
+			$this->load->view('speakers');
+		}
+	}
+	
+	public function panelistas(){
+		if(!is_ajax()){
+			$data->title = 'Panelistas';
+			$data->time_class = $this->day_or_night(); //css classes day or night;
+			$data->main_class = 'home'; //css classes for the body
+			$data->body_class = 'weather';
+			$data->left_content = 'panelists';
+			$data->sidebar = 'sidebar_info';
+			$this->load->view('template/columns_animated', $data);
+		}else{
+			$this->load->view('speakers');
+		}
 	}
 	
 	public function store_email(){

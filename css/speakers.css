@@ -1,35 +1,17 @@
-#main{
-	.title{
-		margin-bottom: 30px;
-	}
-	.bogconf{
-		width: 432px;
-		height: 70px;
-		background: url('../img/text_bogotaconf.png') 0 0 no-repeat;
-		z-index: 10;
-		position: relative;
-	}
-	
-	.tagline{
-		font-family: fonts.neuton;
-		font-size: 26px;
-		line-height: 34px;
-		margin-top: 10px;
-	}
-	
+#speakers, #panelists{
 	.speaker{
 		overflow: hidden;
 		border-top: 2px solid colors.beige;
-		margin-top: 15px;
+		margin-top: 20px;
 		padding-top: 20px;
-		
+
 		.avatar{
 			width: 220px;
 			height: 150px;
 			float: left;
 			margin-right: 20px;
 			position: relative;
-			
+
 			.twitter{
 				width: 31px;
 				height: 32px;
@@ -39,12 +21,12 @@
 				position: absolute;
 				bottom: 10px;
 				right: 10px;
-				
+
 				&:hover{
 					opacity: 1;
 				}
 			}
-			
+
 			&.mojombo{
 				background: url('../img/bio_mojombo.jpg') 0 0 no-repeat;
 			}
@@ -78,12 +60,13 @@
 			&.buritica{
 				background: url('../img/bio_buritica.jpg') 0 0 no-repeat;
 			}
-			
+
 		}
-		
+
 		.bio{
 			width: 340px;
 			float: left;
+			
 			h3.name{
 				font-family: fonts.museo;
 				font-size: 28px;
@@ -91,20 +74,16 @@
 				margin-top: 0;
 
 			}
+			
 			h5.talk{
 				font-family: fonts.museo;
 				color: colors.lightergreen;
 				font-size: 12px;
 			}
+			
+			p{
+				line-height:1.3em;
+			}
 		}
-		
-	}
-	#sponsors{
-		p{
-			margin-left: 15px;
-		}
-		ul{
-			margin-left: 30px;
-		}
-	}
+	}	
 }

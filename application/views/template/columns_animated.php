@@ -23,7 +23,24 @@ if(!defined('BASEPATH')) exit('No direct script access allowed');
 		</div>
 	</header>
 	<div id="main" role="main">
-		<?php $this->load->view($main_content); ?>
+		<div class="wrapper">
+			<div class="tagline">
+				<h1 class="ir bogconf">Bogot&aacute;conf 2011</h1>
+				<p class="desc">La primera conferencia de programaci&oacute;n en Bogot&aacute;.</p>
+			</div>
+
+		</div>
+		<?php $this->load->view('nav_main'); ?>
+		<div id="dark-green">
+			<div class="wrapper">
+				<div id="left-content">
+					<?php $this->load->view($left_content) ?>
+				</div>
+				<div id="sidebar">
+					<?php $this->load->view($sidebar) ?>
+				</div>
+			</div>
+		</div>
 	</div>
 	<?php $this->load->view('template/footer'); ?>
 	
