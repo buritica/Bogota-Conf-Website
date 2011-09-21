@@ -310,6 +310,7 @@
             depends="-rev,
                      -clean,
                      -prodcopy,
+					 -permissions
                      -usemin,
                      -js.all.minify,
                      -js.main.concat,
@@ -322,7 +323,7 @@
                      -htmlclean,
                      -imagespng,
                      -imagesjpg,
-					 -permissions"/>
+"/>
 
     <!-- Target: minify -->
     <target name="-minify.dev"
@@ -820,12 +821,10 @@
 	
 	<target name="-permissions">
 		<echo message="Creating log and cache folders and setting permissions" />
-			<mkdir dir="${dir.publish}/application/libraries/scaffold/cache" />
-			<chmod dir="${dir.publish}/application/libraries/scaffold/cache" perm="777" type="both"/>
-			<mkdir dir="${dir.publish}/application/cache" />
-			<chmod dir="${dir.publish}/application/cache" perm="777" type="both"/>
-			<mkdir dir="${dir.publish}/application/logs" />
-			<chmod dir="${dir.publish}/application/logs" perm="777" type="both"/>		
+
+			<chmod dir="${dir.publish}/application/libraries/scaffold/cache" perm="777" type="both" verbose="true"/>
+			<chmod dir="${dir.publish}/application/cache" perm="777" type="both" verbose="true"/>
+			<chmod dir="${dir.publish}/application/logs" perm="777" type="both" verbose="true"/>		
 	</target>
 
     
