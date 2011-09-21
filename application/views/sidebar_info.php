@@ -16,4 +16,7 @@
 	</ul>
 	<h4>&iquest;Donde?</h4>
 	<p>Por confirmar</p>
+	<h4>Contacto</h4>
+	<p><a href="http://twitter.com/#!/bogotaconf">@bogotaconf</a></p>
+	<p>hola [a] bogotaconf.co</a></p>
 </div>
