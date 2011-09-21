@@ -1,8 +1,6 @@
 //app object
 var bconf = {
-	layer:{
-		body: $('body')
-	},
+	layer:{},
 	status:{},
 	findInArray: function(arr,obj) {
 	    return (arr.indexOf(obj) != -1);
@@ -10,9 +8,11 @@ var bconf = {
 };
 
 bconf.baseUrl = $('#base-url').attr('href');
+bconf.layer.body = $('body');
 bconf.layer.transmi = $('#transmi-outer');
 bconf.layer.header = $('#weather');
 bconf.layer.clouds = $('#clouds');
+bconf.layer.leftContent = $('#left-content .load');
 bconf.status.windowWidth = $(window).width();
 bconf.transmi = {step1: bconf.status.windowWidth*.9 };
 //weather codes
@@ -22,6 +22,36 @@ bconf.weatherCodes.partlyClouded = ['116', '299'];
 bconf.weatherCodes.clear = '113';
 
 //methods
+
+bconf.linkAction = function(){
+	$('a').click(function(e){
+		e.preventDefault();
+		
+		var dataLink = $(this).attr('data-link');
+		var contentToLoad;
+		console.log(dataLink);
+
+		switch(dataLink){
+			case 'load-left':
+				contentToLoad = $(this).attr(dataLink);
+				//TODO: Factor!!
+				bconf.layer.transmi.stop().scrollLeft(0).animate({scrollLeft: bconf.transmi.step1}, 2000, 'easeOutExpo');
+				bconf.layer.leftContent.fadeOut(function(){
+					bconf.layer.leftContent.load(contentToLoad, function(){
+						bconf.layer.leftContent.fadeIn();
+						bconf.layer.transmi.stop().animate({scrollLeft: bconf.status.windowWidth+600}, 2000, 'easeOutExpo');
+					});
+				});
+				break;
+			default:
+				return true;
+				break
+		}
+	
+		return false;
+	});
+}
+//weather
 bconf.setWeather = function(code){
 	
 	//clear
@@ -49,16 +79,6 @@ bconf.setWeather = function(code){
 
 }
 
-bconf.transmiAnimate = function(){
-	bconf.layer.transmi.scrollLeft(0).animate({scrollLeft: bconf.transmi.step1}, 5000, 'easeOutExpo', function(){
-		$(this).delay(1000).animate({scrollLeft: bconf.status.windowWidth+600}, 2000, 'easeOutExpo', function(){
-			window.setTimeout(function(){
-				bconf.transmiAnimate();
-			},6000);
-		});
-	});
-};
-
 bconf.weatherAnimate = function(){
 	$('#clouds .inner').css('right', 0).animate({right: 6400}, 120000, 'linear', function(){
 		bconf.weatherAnimate();
@@ -71,7 +91,19 @@ bconf.weatherAnimateDouble = function(){
 	});
 };
 
-bconf.noPlaceholder = function(){		
+//animations
+bconf.transmiAnimate = function(){
+	bconf.layer.transmi.scrollLeft(0).animate({scrollLeft: bconf.transmi.step1}, 5000, 'easeOutExpo', function(){
+		$(this).delay(1000).animate({scrollLeft: bconf.status.windowWidth+600}, 2000, 'easeOutExpo', function(){
+			// window.setTimeout(function(){
+			// 	bconf.transmiAnimate();
+			// },6000);
+		});
+	});
+};
+
+//feature detection
+bconf.noPlaceholder = function(){
 	var email = $('#email');
 	email.val('No somos amigos del spam');
 	
@@ -118,6 +150,11 @@ bconf.noRequired = function(){
 
 
 $(function(){
+	//hide flashmessage
+	$('#flash .show').delay(3000).slideUp();
+	
+	//deal with links
+	bconf.linkAction();
 
 	//landingpage script
 	if(bconf.layer.body.hasClass('weather')){
@@ -137,8 +174,7 @@ $(function(){
 		// 	    }
 	}
 
-	//hide flashmessage
-	$('#flash .show').delay(3000).slideUp();
+
 	
 	
 });

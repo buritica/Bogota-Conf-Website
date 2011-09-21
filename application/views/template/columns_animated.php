@@ -34,10 +34,14 @@ if(!defined('BASEPATH')) exit('No direct script access allowed');
 		<div id="dark-green">
 			<div class="wrapper">
 				<div id="left-content">
-					<?php $this->load->view($left_content) ?>
+					<div class="load">
+						<?php $this->load->view($left_content) ?>						
+					</div>
 				</div>
 				<div id="sidebar">
-					<?php $this->load->view($sidebar) ?>
+					<div class="load">
+						<?php $this->load->view($sidebar) ?>						
+					</div>
 				</div>
 			</div>
 		</div>
