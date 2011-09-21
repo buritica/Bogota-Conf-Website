@@ -26,11 +26,9 @@ bconf.weatherCodes.clear = '113';
 
 bconf.linkAction = function(){
 	$('a').click(function(e){
-		e.preventDefault();
-		
+	
 		var dataLink = $(this).attr('data-link');
 		var contentToLoad;
-		console.log(dataLink);
 
 		switch(dataLink){
 			case 'load-left':
@@ -49,8 +47,12 @@ bconf.linkAction = function(){
 				return true;
 				break
 		}
-	
-		return false;
+		
+		if(!dataLink){
+			return true;
+		}else{
+			return false;			
+		}
 	});
 	
 	$('nav a').click(function(){
