@@ -310,7 +310,7 @@
             depends="-rev,
                      -clean,
                      -prodcopy,
-					 -permissions
+					 -permissions,
                      -usemin,
                      -js.all.minify,
                      -js.main.concat,
