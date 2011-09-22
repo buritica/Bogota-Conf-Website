@@ -322,7 +322,7 @@
                      -html,
                      -htmlclean,
                      -imagespng,
-                     -imagesjpg,
+                     -imagesjpg
 "/>
 
     <!-- Target: minify -->
