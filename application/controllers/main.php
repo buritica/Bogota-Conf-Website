@@ -1,7 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Main extends CI_Controller {	
-
+	// protected $firebug = NULL;
+	
 
 	public function index()
 	{	
@@ -30,6 +31,7 @@ class Main extends CI_Controller {
 		}else{
 			$this->load->view('speakers');
 		}
+		fb($_SERVER['REQUEST_URI'], 'Request URI');
 	}
 	
 	public function panelistas(){
@@ -43,6 +45,20 @@ class Main extends CI_Controller {
 			$this->load->view('template/columns_animated', $data);
 		}else{
 			$this->load->view('panelists');
+		}
+	}
+	
+	public function entradas(){
+		if(!is_ajax()){
+			$data->title = 'Entradas';
+			$data->time_class = $this->day_or_night(); //css classes day or night;
+			$data->main_class = 'home'; //css classes for the body
+			$data->body_class = 'weather';
+			$data->left_content = 'tickets';
+			$data->sidebar = 'sidebar_info';
+			$this->load->view('template/columns_animated', $data);
+		}else{
+			$this->load->view('tickets');
 		}
 	}
 	
@@ -86,6 +102,9 @@ class Main extends CI_Controller {
 		$this->load->view('template/main', $data);
 	}
 	
+	public function test(){
+
+	}
 	protected function email($email){
 		
 		$data->email = $email;
@@ -113,6 +132,7 @@ class Main extends CI_Controller {
 		return $time;
 	}
 }
+
 
 /* End of file main.php */
 /* Location: ./application/controllers/main.php */
