@@ -17,6 +17,11 @@ if(!defined('BASEPATH')) exit('No direct script access allowed');
 	</footer>
 </div>
 <a href="<?php echo base_url(); ?>" id="base-url" class="hidden"></a>
+<div id="lightbox">
+	<div id="content">
+		
+	</div>
+</div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script>!window.jQuery && document.write(unescape('%3Cscript src="<?php echo base_url(); ?>js/libs/jquery-1.5.1.min.js"%3E%3C/script%3E'))</script>
 

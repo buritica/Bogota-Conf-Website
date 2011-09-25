@@ -249,13 +249,33 @@ footer{
 		padding: 10px 0;
 	}
 }
+
+#lightbox{
+	position: absolute;
+	width: 500px;
+	height: 500px;
+	background: aqua;
+	left: 50%;
+	margin-left: -250px;
+	top: 100px;
+	z-index: 10000;
+	padding: 15px;
+	background-color: transparent;
+  background-color: rgba(44, 48, 20, 0.8);  /* FF3+, Saf3+, Opera 10.10+, Chrome, IE9 */
+	@include box-shadow(0,0,10px, #000);
+	#content{
+		background:colors.beige;
+		width: 500px;
+		height: 500px;
+	}
+}
 /*end main style*/
 /*typography*/
-h1{font-size: 30px;}
-h2{font-size: 26px;}
-h3{font-size: 22px;}
-h4{font-size: 18px;}
-h5{font-size: 16px;}
-h6{font-size: 14px;}
+h1{font-size: 30px; margin-bottom: .7em;}
+h2{font-size: 26px; margin-bottom: .7em;}
+h3{font-size: 22px; margin-bottom: .7em;}
+h4{font-size: 18px; margin-bottom: .7em;}
+h5{font-size: 16px; margin-bottom: .7em;}
+h6{font-size: 14px; margin-bottom: .7em;}
 
 /*end typography*/

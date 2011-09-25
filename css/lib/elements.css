@@ -1,0 +1,18 @@
+#dark-green{
+	a.button{
+		display: inline-block;
+		padding: 7px 12px;
+		line-height: 1em;
+		text-decoration: none;
+		border: 1px solid colors.lightergreen;
+		color: #000;
+		text-shadow: 0px 1px 0px colors.lightergreen;
+		@include border-radius(4px);
+		@include bg-gradient(colors.lightergreen, colors.lightgreen);
+	
+		&:hover{
+			color: colors.beige;
+			text-shadow: 0px -1px 0px colors.darkgreen;
+		}
+	}
+}

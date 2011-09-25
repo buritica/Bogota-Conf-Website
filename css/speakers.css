@@ -72,6 +72,7 @@
 				font-size: 28px;
 				width: 340px;
 				margin-top: 0;
+				margin-bottom: .2em;
 
 			}
 			
@@ -79,6 +80,7 @@
 				font-family: fonts.museo;
 				color: colors.lightergreen;
 				font-size: 12px;
+				margin-bottom: 2em;
 			}
 			
 			p{

@@ -31,7 +31,6 @@ class Main extends CI_Controller {
 		}else{
 			$this->load->view('speakers');
 		}
-		fb($_SERVER['REQUEST_URI'], 'Request URI');
 	}
 	
 	public function panelistas(){

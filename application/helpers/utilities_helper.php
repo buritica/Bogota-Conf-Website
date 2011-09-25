@@ -52,7 +52,6 @@ if(!function_exists('render_links')){
 //check if request was done with ajax
 if(!function_exists('is_ajax')){
 	function is_ajax(){
-		fb($_SERVER,'Server');
 		//if request done with ajax return true
 		if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] == "XMLHttpRequest"){
 			return TRUE;

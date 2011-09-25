@@ -89,11 +89,12 @@ a:hover { color: colors.darkgreen; }
 /*import some rules first*/
 @import 'lib/variables.css'; /*sitewide variables*/
 @import 'lib/mixins.css'; /*sitewide mixins*/
-@import 'elements.css'; /*main elements*/
+@import 'lib/elements.css'; /*main elements*/
 @import 'template.css'; /*temmplate style*/
 @import 'home.css';
 @import 'sidebars.css';
 @import 'speakers.css';
+@import 'tickets.css';
 
 /*end import*/
 .ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
