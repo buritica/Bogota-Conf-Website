@@ -1,5 +1,5 @@
 #logs, cache and google files
-application/libraries/scaffold/cache/
+application/libraries/scaffold/cache
 application/cache
 application/logs
 g*.html
@@ -9,3 +9,4 @@ build/config/buildinfo.properties
 
 #ant publish
 publish/
+!.gitkeep
