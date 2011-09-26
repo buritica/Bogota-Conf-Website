@@ -1,8 +1,14 @@
-#sponsors{
+#sidebar-info{
 	p{
 		margin-left: 15px;
 	}
 	ul{
 		margin-left: 30px;
+	}
+	
+	#facebook{
+		.fb-like-box{
+			background: white;
+		}
 	}
 }

@@ -30,6 +30,7 @@ if(!defined('BASEPATH')) exit('No direct script access allowed');
 <script src="<?php echo base_url() ?>js/script.js"></script>
 <!-- end scripts-->
 
+<!-- Analytics -->
 <script type="text/javascript">
 var clicky_site_id = 66410187;
 (function() {
@@ -41,6 +42,16 @@ var clicky_site_id = 66410187;
 })();
 </script>
 <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/66410187ns.gif" /></p></noscript>
+<!-- Social -->
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 </body>
 </html>
 <?php  

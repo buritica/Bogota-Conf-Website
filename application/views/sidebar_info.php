@@ -1,4 +1,4 @@
-<div id="sponsors">
+<div id="sidebar-info">
 	<h4>&iquest;Cu&aacute;ndo?</h4>
 	<p class="desc">1ro de Noviembre, 2011. Bogotá, Colombia.</p>
 	<h4>&iquest;Cu&aacute;nto cuesta?</h4>
@@ -19,4 +19,9 @@
 	<h4>Contacto</h4>
 	<p><a href="http://twitter.com/#!/bogotaconf">@bogotaconf</a></p>
 	<p>hola [a] bogotaconf.co</a></p>
+	<div id="facebook">
+		<div id="fb-root"></div>
+		<div class="fb-like-box" data-href="http://www.facebook.com/pages/BogotaConf/258011817570908" data-width="300" data-show-faces="true" data-border-color="#22260F" data-stream="true" data-header="false"></div>
+	</div>
+	
 </div>
