@@ -36,13 +36,15 @@ if(! function_exists('is_admin')){
 }
 
 //checks if link is active, and adds active class accordingly
-if(!function_exists('active_link')){
-	function active_link($uri, $text){
-		$CI =& get_instance();
-		if($CI->input->server('REQUEST_URI') == "/".$uri){
-			echo '<a id="vr-'.strtolower($text).'" href="'.base_url().$uri.'" class="active">'.$text.'</a>';
-		}else{
-			echo '<a id="vr-'.strtolower($text).'" href="'.base_url().$uri.'">'.$text.'</a>';
+if(!function_exists('render_links')){
+	function render_links($links){
+		foreach($links as $text => $position){
+			
+			$lowertext = strtolower($text);
+			$active = strpos($_SERVER['REQUEST_URI'], $lowertext) ? ' class="active"': '';
+			$attr = 'data-link="'.$position.'" '.$position.'="'.$lowertext.'"'.$active;
+			
+			echo '<a id="'.$lowertext.'" href="'.base_url().$lowertext.'" '.$attr.'>'.$text.'</a>';
 		}
 	}
 }
@@ -50,9 +52,8 @@ if(!function_exists('active_link')){
 //check if request was done with ajax
 if(!function_exists('is_ajax')){
 	function is_ajax(){
-		$CI =& get_instance();
 		//if request done with ajax return true
-		if($CI->input->server('HTTP_X_REQUESTED_WITH') && $CI->input->server('HTTP_X_REQUESTED_WITH') == "XMLHttpRequest"){
+		if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] == "XMLHttpRequest"){
 			return TRUE;
 		}else{//not ajax, return false
 			return FALSE;

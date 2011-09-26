@@ -16,7 +16,6 @@
 */
 if(ENV == 'local'){
 	$config['base_url']	= "/bconf/";
-	date_default_timezone_set('America/New_York');
 }elseif(ENV == 'dev'){
 	$config['base_url']	= "http://dev.bogotaconf.co/";
 }elseif(ENV == 'live'){
@@ -366,6 +365,18 @@ $config['rewrite_short_tags'] = FALSE;
 |
 */
 $config['proxy_ips'] = '';
+
+/*
+|--------------------------------------------------------------------------
+| FirePHP enable for local dev
+|--------------------------------------------------------------------------
+|
+|
+*/
+if(ENV == 'local' || ENV == 'dev'){
+		// require_once(APPPATH.'/libraries/FirePHPCore/FirePHP.class.php');
+		require_once(APPPATH.'/libraries/FirePHPCore/fb.php');
+}
 
 
 /* End of file config.php */

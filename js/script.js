@@ -26,10 +26,14 @@ bconf.weatherCodes.clear = '113';
 
 bconf.linkAction = function(){
 	$('a').click(function(e){
-	
+
 		var dataLink = $(this).attr('data-link');
 		var contentToLoad;
-
+		
+		if(!dataLink){
+			return true;
+		}
+		
 		switch(dataLink){
 			case 'load-left':
 				contentToLoad = $(this).attr(dataLink);
@@ -43,16 +47,15 @@ bconf.linkAction = function(){
 					});
 				});
 				break;
+			case 'lightbox':
+				console.log('lightbox');
+				break;
 			default:
 				return true;
 				break
 		}
-		
-		if(!dataLink){
-			return true;
-		}else{
-			return false;			
-		}
+		return false;
+
 	});
 	
 	$('nav a').click(function(){
@@ -162,6 +165,9 @@ bconf.noRequired = function(){
 
 
 $(document).ready(function(){
+	if(window.location.pathname == '/' || window.location.pathname == '/bconf/'){
+		$('nav a').first().addClass('active');
+	}
 	//hide flashmessage
 	$('#flash .show').delay(3000).slideUp();
 	
