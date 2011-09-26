@@ -1,5 +1,5 @@
 <div id="panelists">
-	<h2 class="title">Panelistas</h2>
+	<h2 class="title">Panelistas - 5 invitados locales.</h2>
 	<div class="speaker">
 		<div class="avatar torrenegra">
 			<a href="http://twitter.com/#!/torrenegra" target="_blank" class="twitter"></a>

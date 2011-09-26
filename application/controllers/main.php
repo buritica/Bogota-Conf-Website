@@ -13,6 +13,8 @@ class Main extends CI_Controller {
 			$data->body_class = 'weather';
 			$data->left_content = 'speakers';
 			$data->sidebar = 'sidebar_info';
+			$data->pro_remain = $this->get_remaining_tickets(1);
+			$data->student_remain = $this->get_remaining_tickets(2);
 			$this->load->view('template/columns_animated', $data);
 		}else{
 			$this->load->view('speakers');
@@ -27,6 +29,8 @@ class Main extends CI_Controller {
 			$data->body_class = 'weather';
 			$data->left_content = 'speakers';
 			$data->sidebar = 'sidebar_info';
+			$data->pro_remain = $this->get_remaining_tickets(1);
+			$data->student_remain = $this->get_remaining_tickets(2);
 			$this->load->view('template/columns_animated', $data);
 		}else{
 			$this->load->view('speakers');
@@ -41,6 +45,8 @@ class Main extends CI_Controller {
 			$data->body_class = 'weather';
 			$data->left_content = 'panelists';
 			$data->sidebar = 'sidebar_info';
+			$data->pro_remain = $this->get_remaining_tickets(1);
+			$data->student_remain = $this->get_remaining_tickets(2);
 			$this->load->view('template/columns_animated', $data);
 		}else{
 			$this->load->view('panelists');
@@ -55,12 +61,25 @@ class Main extends CI_Controller {
 			$data->body_class = 'weather';
 			$data->left_content = 'tickets';
 			$data->sidebar = 'sidebar_info';
+			$data->pro_remain = $this->get_remaining_tickets(1);
+			$data->student_remain = $this->get_remaining_tickets(2);
 			$this->load->view('template/columns_animated', $data);
 		}else{
 			$this->load->view('tickets');
 		}
 	}
 	
+	public function update_tickets($id,$quantity){
+		$t = new Ticket();
+		$t->get_by_id($id);
+		// fb($t->type);
+		$t->remain = $quantity;
+		if($t->save()){
+			fb('Tickets remaining for '.$t->type.' updated to: '.$t->remain, 'Success');
+		}else{
+			fb('Updating tickets failed', 'Error:');
+		}
+	}
 	public function store_email(){
 		
 		if($this->input->post('email')){			
@@ -92,22 +111,9 @@ class Main extends CI_Controller {
 		}
 	}
 	
-	//friends page
-	public function friends(){
-		
-		$data->title = 'Amigos de Bogotaconf';
-		$data->time_class = $this->day_or_night(); //css classes day or night;
-		$data->main_content = 'friends';
-		$this->load->view('template/main', $data);
-	}
 	
 	public function test(){
 
-	}
-	protected function email($email){
-		
-		$data->email = $email;
-		user_notify_postmark('email/maillist', 'Hemos guardado tu email.', $email, $data);
 	}
 	
 	protected function day_or_night()
@@ -129,6 +135,21 @@ class Main extends CI_Controller {
 		}
 		
 		return $time;
+	}
+	
+	protected function email($email){
+		
+		$data->email = $email;
+		user_notify_postmark('email/maillist', 'Hemos guardado tu email.', $email, $data);
+	}	
+	
+ 	protected function get_remaining_tickets($id){
+		
+		$t = new Ticket();
+		$t->get_by_id($id);
+		// fb($t->type);
+		return $t->remain;
+		
 	}
 }
 

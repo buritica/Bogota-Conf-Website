@@ -1,5 +1,5 @@
 <div id="speakers">
-	<h2 class="title">Conferencistas</h2>
+	<h2 class="title">Conferencistas - 6 invitados internacionales.</h2>
 	<div class="speaker">
 		<div class="avatar mojombo">
 			<a href="http://twitter.com/#!/mojombo" target="_blank" class="twitter"></a>

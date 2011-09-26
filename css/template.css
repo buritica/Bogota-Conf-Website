@@ -172,8 +172,12 @@ header{
 	.tagline{
 		font-family: fonts.neuton;
 		font-size: 26px;
-		line-height: 34px;
+		line-height: 1em;
 		margin-top: 10px;
+		
+		.desc{
+			font-size: 18px;
+		}
 	}	
 }
 

@@ -64,7 +64,11 @@ bconf.linkAction = function(){
 }
 
 bconf.fixColumnHeights = function(){
-	bconf.layer.sidebar.height(bconf.layer.leftContent.height());
+	if(bconf.layer.sidebar.height() < 1040){
+		bconf.layer.sidebar.height(bconf.layer.leftContent.height());
+	}else{
+		bconf.layer.sidebar.height(1039);
+	}
 }
 //weather
 bconf.setWeather = function(code){
