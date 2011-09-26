@@ -2,7 +2,7 @@
 	<h4>&iquest;Cu&aacute;ndo?</h4>
 	<ul class="cost">
 		<li>7am - 4pm, 31 de Oct&uacute;bre, 2011.</li>
-		<li>Uniandinos. Calle 92 No. 16 - 11</li>
+		<!-- <li>Uniandinos. Calle 92 No. 16 - 11</li> -->
 		<li> Bogot&aacute;, Colombia.</li>
 	</ul>
 	<h4>&iquest;Cu&aacute;nto cuesta?</h4>

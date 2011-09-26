@@ -27,7 +27,7 @@ if(!defined('BASEPATH')) exit('No direct script access allowed');
 			<div class="tagline">
 				<h1 class="ir bogconf">Bogot&aacute;conf 2011</h1>
 				<p>La primera conferencia de Desarrollo Web y M&oacute;vil en Bogot&aacute;.</p>
-				<p class="desc">Lunes, 31 de Octúbre. Uniandinos, Bogot&aacute;, Colombia.</p>
+				<p class="desc">Lunes, 31 de Octúbre. Bogot&aacute;, Colombia.</p>
 			</div>
 
 		</div>
