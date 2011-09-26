@@ -181,9 +181,9 @@ $(document).ready(function(){
 		bconf.weatherAnimateDouble();
 		
 		//weather
-		// 	 	$.get('http://free.worldweatheronline.com/feed/weather.ashx?q=Bogota&format=json&num_of_days=1&key=3105835f23235510110804',function(weather){
-		// 	 bconf.setWeather(weather.data.current_condition[0].weatherCode);
-		// },'jsonp');	
+	 	$.get('http://free.worldweatheronline.com/feed/weather.ashx?q=Bogota&format=json&num_of_days=1&key=3105835f23235510110804',function(weather){
+			 bconf.setWeather(weather.data.current_condition[0].weatherCode);
+		},'jsonp');	
 
 		//modernizr
 		// if placeholder isn't supported:
