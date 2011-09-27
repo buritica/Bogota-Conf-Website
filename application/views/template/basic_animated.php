@@ -34,7 +34,7 @@ if(!defined('BASEPATH')) exit('No direct script access allowed');
 		<?php $this->load->view('nav_main'); ?>
 		<div id="dark-green">
 			<div class="wrapper">
-				<?php echo $basic_content; ?>
+				<?php $this->load->view($basic_content); ?>
 			</div>
 		</div>
 	</div>

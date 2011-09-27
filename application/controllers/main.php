@@ -69,6 +69,19 @@ class Main extends CI_Controller {
 		}
 	}
 	
+	public function comprar(){
+		if(!is_ajax()){
+			$data->title = 'Entradas';
+			$data->time_class = $this->day_or_night(); //css classes day or night;
+			$data->main_class = 'home'; //css classes for the body
+			$data->body_class = 'weather';
+			$data->basic_content = 'lightbox_tickets';
+			$this->load->view('template/basic_animated', $data);
+		}else{
+			$this->load->view('lightbox_tickets');
+		}
+	}
+	
 	public function update_tickets($id,$quantity){
 		$t = new Ticket();
 		$t->get_by_id($id);

@@ -17,16 +17,11 @@ if(!defined('BASEPATH')) exit('No direct script access allowed');
 	</footer>
 </div>
 <a href="<?php echo base_url(); ?>" id="base-url" class="hidden"></a>
+<div id="overlay"></div>
 <div id="lightbox">
+	<a href="#" class="close" data-link="lightbox-close"></a>
 	<div id="content">
-		<h2>Compra de Entradas Offline</h2>
-		<hr />
-		<p>Lléna el siguiente formulario y sígue las instrucciones que te enviamos por mail.</p>
-		<form action="registro_preventa" method="post" accept-charset="utf-8">
-			
 
-
-		</form>
 	</div>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>

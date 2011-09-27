@@ -14,6 +14,8 @@ bconf.layer.header = $('#weather');
 bconf.layer.clouds = $('#clouds');
 bconf.layer.leftContent = $('#left-content .load');
 bconf.layer.sidebar = $('#sidebar');
+bconf.layer.overlay =  $('#overlay');
+bconf.layer.lightbox = $('#lightbox');
 bconf.status.windowWidth = $(window).width();
 bconf.transmi = {step1: bconf.status.windowWidth*.9 };
 //weather codes
@@ -25,9 +27,10 @@ bconf.weatherCodes.clear = '113';
 //methods
 
 bconf.linkAction = function(){
-	$('#main').delegate('a', 'click', function(e){
+	$('body').delegate('a', 'click', function(e){
 
 		var dataLink = $(this).attr('data-link');
+		var href = $(this).attr('href');
 		var contentToLoad;
 		
 		if(!dataLink){
@@ -48,7 +51,17 @@ bconf.linkAction = function(){
 				});
 				break;
 			case 'lightbox':
+				bconf.layer.overlay.fadeIn();
+				bconf.layer.lightbox.find('#content').load(bconf.baseUrl+href, function(){
+				 $(this).parent().fadeIn().animate({top:($(window).height()-$(this).height())/2});	
+				});
+
 				console.log('lightbox');
+				break;
+			case 'lightbox-close':
+				bconf.layer.overlay.fadeOut();
+				bconf.layer.lightbox.fadeOut();
+				console.log('lightbox close');
 				break;
 			default:
 				return true;
@@ -65,7 +78,7 @@ bconf.linkAction = function(){
 }
 
 bconf.fixColumnHeights = function(){
-	if(bconf.layer.sidebar.height() < 1040){
+	if(bconf.layer.sidebar.height() < 1040 && bconf.layer.leftContent.height() > 1040){
 		bconf.layer.sidebar.height(bconf.layer.leftContent.height());
 	}else{
 		bconf.layer.sidebar.height(1039);
