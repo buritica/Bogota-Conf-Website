@@ -79,8 +79,8 @@ $db['local']['dbcollat'] = "utf8_general_ci";
 
 //dev server
 $db['dev']['hostname'] = "localhost";
-$db['dev']['username'] = "bogotaconf";
-$db['dev']['password'] = "Bogota1357!";
+$db['dev']['username'] = "";
+$db['dev']['password'] = "";
 $db['dev']['database'] = "bogotaconf_prod";
 $db['dev']['dbdriver'] = "mysql";
 $db['dev']['dbprefix'] = "";
@@ -94,8 +94,8 @@ $db['dev']['dbcollat'] = "utf8_general_ci";
 //live server
 $db['live']['hostname'] = "localhost";
 $db['live']['username'] = "bogotaconf";
-$db['live']['password'] = "Bogota1357!";
-$db['live']['database'] = "bogotaconf_prod";
+$db['live']['password'] = "";
+$db['live']['database'] = "";
 $db['live']['dbdriver'] = "mysql";
 $db['live']['dbprefix'] = "";
 $db['live']['pconnect'] = TRUE;

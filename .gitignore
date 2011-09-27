@@ -2,6 +2,7 @@
 application/libraries/scaffold/cache
 application/cache
 application/logs
+application/config/database.php
 g*.html
 
 #ant config

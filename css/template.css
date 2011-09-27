@@ -266,7 +266,7 @@ footer{
   background-color: rgba(44, 48, 20, 0.8);  /* FF3+, Saf3+, Opera 10.10+, Chrome, IE9 */
 	@include box-shadow(0,0,10px, #000);
 	padding: 15px;
-	display: none;
+/*	display: none;*/
 	
 	#content{
 		background:colors.beige;

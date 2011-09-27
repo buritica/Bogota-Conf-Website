@@ -124,6 +124,7 @@ class Main extends CI_Controller {
 		$data->basic_content = 'Hola Mundo';
 		$this->load->view('template/basic_animated', $data);
 	}
+	
 	protected function day_or_night()
 	{
 		$current_time = date("G");
