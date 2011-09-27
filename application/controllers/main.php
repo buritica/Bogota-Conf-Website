@@ -113,9 +113,17 @@ class Main extends CI_Controller {
 	
 	
 	public function test(){
-
+		
 	}
 	
+	public function basic(){
+		$data->title = 'Basic';
+		$data->time_class = $this->day_or_night(); //css classes day or night;
+		$data->main_class = 'home'; //css classes for the body
+		$data->body_class = 'weather';
+		$data->basic_content = 'Hola Mundo';
+		$this->load->view('template/basic_animated', $data);
+	}
 	protected function day_or_night()
 	{
 		$current_time = date("G");

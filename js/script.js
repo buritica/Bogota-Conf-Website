@@ -25,7 +25,7 @@ bconf.weatherCodes.clear = '113';
 //methods
 
 bconf.linkAction = function(){
-	$('a').click(function(e){
+	$('#main').delegate('a', 'click', function(e){
 
 		var dataLink = $(this).attr('data-link');
 		var contentToLoad;
@@ -52,9 +52,10 @@ bconf.linkAction = function(){
 				break;
 			default:
 				return true;
-				break
+				break;
 		}
 		return false;
+		
 
 	});
 	

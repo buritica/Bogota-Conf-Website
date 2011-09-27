@@ -246,7 +246,6 @@ footer{
 	a{
 		font-weight: normal;
 		color: colors.beige;
-
 	}
 	
 	.wrapper{
@@ -257,20 +256,38 @@ footer{
 #lightbox{
 	position: absolute;
 	width: 500px;
-	height: 500px;
+	min-height: 500px;
 	background: aqua;
 	left: 50%;
 	margin-left: -250px;
 	top: 100px;
 	z-index: 10000;
-	padding: 15px;
 	background-color: transparent;
   background-color: rgba(44, 48, 20, 0.8);  /* FF3+, Saf3+, Opera 10.10+, Chrome, IE9 */
 	@include box-shadow(0,0,10px, #000);
+	padding: 15px;
+	display: none;
+	
 	#content{
 		background:colors.beige;
-		width: 500px;
-		height: 500px;
+		width: 470px;
+		min-height: 500px;
+		padding: 15px;
+		color: colors.lightgreen;
+		font-family: fonts.museo;
+		
+		h1,h2,h3,h4,h5,h6{
+			font-family: fonts.museo;
+		}
+		hr{
+			border-top: 1px solid colors.darkbeige;
+			border-bottom: 1px solid white;
+			
+		}
+	}
+	
+	form{
+		
 	}
 }
 /*end main style*/
