@@ -54,6 +54,9 @@ class Main extends CI_Controller {
 	}
 	
 	public function entradas(){
+		$data->pro_remain = $this->get_remaining_tickets(1);
+		$data->student_remain = $this->get_remaining_tickets(2);
+		
 		if(!is_ajax()){
 			$data->title = 'Entradas';
 			$data->time_class = $this->day_or_night(); //css classes day or night;
@@ -61,15 +64,14 @@ class Main extends CI_Controller {
 			$data->body_class = 'weather';
 			$data->left_content = 'tickets';
 			$data->sidebar = 'sidebar_info';
-			$data->pro_remain = $this->get_remaining_tickets(1);
-			$data->student_remain = $this->get_remaining_tickets(2);
 			$this->load->view('template/columns_animated', $data);
 		}else{
-			$this->load->view('tickets');
+			$this->load->view('tickets',$data);
 		}
 	}
 	
 	public function comprar(){
+
 		if(!is_ajax()){
 			$data->title = 'Entradas';
 			$data->time_class = $this->day_or_night(); //css classes day or night;
