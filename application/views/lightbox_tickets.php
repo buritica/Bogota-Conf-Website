@@ -13,8 +13,8 @@
 						<li class="sub"><input type="email" name="email" id="" tabindex="11" required="true"/></li>
 						<li><label for="ticket_type">Tipo de Entrada</label></li>
 						<li class="sub">
-							Estudiante<input type="radio" name="ticket_type" id="" value="student"  required="true"/>
-							Profesional<input type="radio" name="ticket_type" id="" checked="checked" tabindex="13" value="pro" required="true"/>
+							Estudiante<input type="radio" name="ticket_type" id="" value="student"  required="true" <?php echo ($ticket_type == 'student')? 'checked="checked" ': '' ; ?>/>
+							Profesional<input type="radio" name="ticket_type" id="" tabindex="13" value="pro" required="true" <?php echo ($ticket_type == 'pro')? 'checked="checked" ': '' ; ?>/>
 						</li>
 						<li><label for="translation">Necesita Traduci&oacute;n</label></li>
 						<li class="sub">
@@ -30,7 +30,7 @@
 					</ul>
 	</fieldset>
 	<hr />
-	<p>Tu cupo será reservado por 48 horas y confirmado cuando completes la transaccion, de lo contrario no podremos garantizar tu cupo.</p>
+	<p>Tu cupo será reservado por 48 horas y confirmado cuando completes la transacci&oacute;n, de lo contrario no podremos garantizarlo.</p>
 	<hr />
 	<fieldset>
 		<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash()?>" /> 

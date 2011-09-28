@@ -70,8 +70,8 @@ class Main extends CI_Controller {
 		}
 	}
 	
-	public function comprar(){
-
+	public function comprar($type){
+		$data->ticket_type = $type;
 		if(!is_ajax()){
 			$data->title = 'Entradas';
 			$data->time_class = $this->day_or_night(); //css classes day or night;
@@ -80,7 +80,7 @@ class Main extends CI_Controller {
 			$data->basic_content = 'lightbox_tickets';
 			$this->load->view('template/basic_animated', $data);
 		}else{
-			$this->load->view('lightbox_tickets');
+			$this->load->view('lightbox_tickets',$data);
 		}
 	}
 	
@@ -94,6 +94,8 @@ class Main extends CI_Controller {
 		}else{
 			fb('Updating tickets failed', 'Error:');
 		}
+		
+		redirect('/');
 	}
 	public function store_email(){
 		

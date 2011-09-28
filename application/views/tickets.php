@@ -9,7 +9,7 @@
 				$150,000 (US$79) hasta el 29 de Octubre
 			</li>
 		</ul>
-		<a href="comprar" class="button" data-link="lightbox">Comprar por consignac&iacute;&oacute;n</a>
+		<a href="comprar/pro" class="button" data-link="lightbox">Comprar por consignac&iacute;&oacute;n</a>
 		<div id="purchase">
 			<p>
 				Venta de entradas Profesionales con Tarjeta de Cr&eacute;dito:
@@ -29,7 +29,7 @@
 				Carnet estudiantil vigente es <b>obligatorio</b>
 			</li>
 		</ul>
-		<a href="comprar" class="button" data-link="lightbox">Comprar por consignac&iacute;&oacute;n</a>
+		<a href="comprar/student" class="button" data-link="lightbox">Comprar por consignac&iacute;&oacute;n</a>
 		
 
 </div>

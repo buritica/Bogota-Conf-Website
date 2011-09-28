@@ -27,7 +27,7 @@
 		</div>
 		<div class="bio">
 			<h3 class="name">Obie Fernandez</h3>
-			<!-- <h5 class="talk"></h5> -->
+			<h5 class="talk">The Next Big Leap</h5>
 			<p>Autor del libro '<a href="http://www.amazon.com/Rails-Way-Addison-Wesley-Professional-Ruby/dp/0321601661" target="_blank">The 				Rails Way'</a>, la gu&iacute;a de referencia de Ruby, de Addison-Wesley Professional Editorial. <p>Fundador de <a href="http://hashrocket.com/" target="_blank">Hashrocket</a>, y miembro reconocido en la comunidad internacional de Ruby</p>
 		</div>				
 	</div>

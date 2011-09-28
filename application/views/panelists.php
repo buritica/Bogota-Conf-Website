@@ -1,14 +1,14 @@
 <div id="panelists">
 	<h2 class="title">Panelistas - 5 invitados locales.</h2>
 	<div class="speaker">
-		<div class="avatar torrenegra">
-			<a href="http://twitter.com/#!/torrenegra" target="_blank" class="twitter"></a>
+		<div class="avatar gigiborja">
+			<a href="http://twitter.com/#!/gigiborja" target="_blank" class="twitter"></a>
 		</div>
 		<div class="bio">
 
-			<h3 class="name">Alex Torrenegra</h3>
+			<h3 class="name">Gisella Borja</h3>
 
-			<p>Emprendedor Colombiano residente en New York. Alex es CEO y Co-fundador de <a href="http://torrenegralabs.com" target="_blank">TorrenegraLabs</a></p>
+			<p>DevOps Manager (CTO) Colombiana para BookingMarkets (<a href="http://localo.com">Localo</a>, <a href="http://letmego.com">LetMeGo</a>, <a href="http://inbed.me">InBed</a>), residente en Bogotá.</p>
 		</div>				
 	</div>
 	<div class="speaker">

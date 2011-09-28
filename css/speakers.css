@@ -48,6 +48,9 @@
 			&.torrenegra{
 				background: url('../img/bio_torrenegra.jpg') 0 0 no-repeat;
 			}
+			&.gigiborja{
+				background: url('../img/bio_gigiborja.jpg') 0 0 no-repeat;
+			}
 			&.andresbarreto{
 				background: url('../img/bio_andresbarreto.jpg') 0 0 no-repeat;
 			}
