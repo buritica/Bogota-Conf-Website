@@ -1,6 +1,75 @@
 #tickets{
 	
-	#purchase{
+	#eventbrite{
 		margin-top: 15px;
+	}
+}
+
+#purchase{
+	background:colors.beige;
+	width: 320px;
+	min-height: 500px;
+	padding: 15px;
+	color: colors.lightgreen;
+	font-family: fonts.museo;
+	margin-left: 130px;
+	
+	h1,h2,h3,h4,h5,h6{
+		font-family: fonts.museo;
+	}
+	
+	hr{
+		border-top: 1px solid colors.darkbeige;
+		border-bottom: 1px solid white;
+	}
+ 	form{
+		fieldset:{
+			margin: 5px 0 10px;
+		}
+		
+		ul{
+			list-style-type: none;
+			margin: 0;
+			
+			li.sub{
+				padding-left: 15px;
+			}
+	
+		}
+		
+		label{
+			display: inline-block;
+			margin: 7px 0;
+			font-size: 1.1em;
+		}
+		
+		input[type="radio"]{
+			margin:0 15px;
+		}	
+		
+		input[type="email"], input[type="text"]{
+			width: 247px;
+			height:30px;
+			padding: 0;
+			color: colors.darkgreen;
+			font-size: 14px;
+			padding: 0 0 0 13px;
+			line-height: 40px;
+			border: 1px solid colors.lightgreen;
+		}
+		input[type="submit"]{
+			height: 30px;
+			width: 95px;
+			text-align: center;
+			font-size: 18px;
+			float: right;
+			line-height: 1em;
+			padding: 6px 12px;
+		}
+		
+		input::-webkit-input-placeholder {
+		   	color: colors.darkgreen;
+			font-size: 14px;
+		}
 	}
 }

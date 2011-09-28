@@ -10,7 +10,7 @@
 			</li>
 		</ul>
 		<a href="comprar/pro" class="button" data-link="lightbox">Comprar por consignac&iacute;&oacute;n</a>
-		<div id="purchase">
+		<div id="eventbrite">
 			<p>
 				Venta de entradas Profesionales con Tarjeta de Cr&eacute;dito:
 			</p>
