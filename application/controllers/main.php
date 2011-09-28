@@ -210,7 +210,11 @@ class Main extends CI_Controller {
 	
 	public function subir_consignacion($email){
 		$new_name = explode('.com', $email);
-		$config['upload_path'] = '../../private/uploads/';
+		if(ENV == 'live'){
+			$config['upload_path'] = '../../../private/uploads/';
+		}else{
+			$config['upload_path'] = '../../private/uploads/';
+		}
 		$config['allowed_types'] = 'jpg|png';
 		$config['max_size']	= '0';
 		$config['max_width']  = '0';
@@ -306,67 +310,6 @@ class Main extends CI_Controller {
 			
 		}
 	}
-	
-	public function test_form(){
-			$this->load->helper('form');
-			echo '<html>
-			<head>
-			<title>Upload Form</title>
-			</head>
-			<body>';
-
-			// echo $error;
-
-			echo form_open_multipart('test_upload');
-
-			echo '<input type="file" name="file" size="20" />
-
-			<br /><br />
-
-			<input type="submit" value="upload" />
-
-			</form>
-
-			</body>
-			</html>';
-	}
-	public function test_upload(){
-		$config['upload_path'] = '../../private/uploads/';
-		$config['allowed_types'] = 'gif|jpg|png';
-		$config['max_size']	= '0';
-		$config['max_width']  = '0';
-		$config['max_height']  = '0';
-		$config['file_name'] = 'me@me';
-
-		$this->load->library('upload', $config);
-		
-		
-		if ( ! $this->upload->do_upload('file'))
-		{
-			$error = array('error' => $this->upload->display_errors());
-
-		 fb($error);
-		}
-		else
-		{
-			$data = $this->upload->data();
-			fb($data['full_path']);
-			
-			$config = array( 'email' => 'juanpablo@buritica.org', 'password' => 'Axfxi666');
-			// // $config->email = 'juanpablo@buritica.org';
-			// // $config->password = 'Axfxi666';
-			// 
-			$dbx = $this->load->library('DropboxUploader', $config);
-			$dbx = new DropboxUploader($config);
-		
-      $dbx->upload($data['full_path'], 'bconf');
-			echo 'upload';
-			fb($dbx);
-			echo 'success';
-		}
-
-	}
-
 }
 
 
