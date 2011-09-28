@@ -188,7 +188,11 @@ $config['directory_trigger']	= 'd'; // experimental not currently in use
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 0;
+if(ENV == 'local'){
+	$config['log_threshold'] = 2;	
+}else{
+	$config['log_threshold'] = 0;	
+}
 
 /*
 |--------------------------------------------------------------------------

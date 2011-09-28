@@ -78,7 +78,7 @@ bconf.linkAction = function(){
 }
 
 bconf.purchaseSubmitAction = function(){
-	$('body').delegate('form', 'submit', function(e){
+	$('#lightbox').delegate('form', 'submit', function(e){
 		formData = $(this).serialize();
 		postUrl = $(this).attr('action');
 		$.post(postUrl, formData, function(results){
@@ -188,7 +188,7 @@ bconf.noRequired = function(){
 			email.val(':(');
 		}else{
 				$.post(bconf.baseUrl+'store_email/', $(this).serialize(), function(data){
-					$('#flash .wrapper').html(data.message).slideDown().delay(3000).slideUp();
+					$('#flash .wrapper').html(data.message).slideDown().delay(6000).slideUp();
 					email.val(':)');
 				}, 'json');
 				
@@ -214,7 +214,7 @@ $(document).ready(function(){
 	
 	//event handlers
 	bconf.linkAction();
-	// bconf.purchaseSubmitAction();
+	bconf.purchaseSubmitAction();
 	
 	//landingpage script
 	if(bconf.layer.body.hasClass('weather')){

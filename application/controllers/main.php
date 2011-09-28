@@ -105,6 +105,8 @@ class Main extends CI_Controller {
 				<hr />
 				<a href="#" class="button" data-link="lightbox-close">Cerrar</a>
 			';
+			
+			//TODO: aqui enviamos el mail de instrucciones
 		}else{
 			$results->success = FALSE;
 			$results->errors = $a->error->string;
@@ -179,15 +181,90 @@ class Main extends CI_Controller {
 		}
 	}
 	
-	public function basic(){
-		$data->title = 'Basic';
+	public function confirmar_consignacion($email){
+		$this->load->helper('form');
+		$a = new Attendee();
+		$a->get_by_email($email);
+		if(!$a->id){
+			redirect('/');
+		}
+		
+		$first_name = explode(" ",$a->name);
+		$data->name = $first_name[0];
+		$data->attendee = $a;
+		
+		$data->pro_remain = $this->get_remaining_tickets(1);
+		$data->student_remain = $this->get_remaining_tickets(2);
+		
+		$data->title = 'Confirmar Consignación';
 		$data->time_class = $this->day_or_night(); //css classes day or night;
 		$data->main_class = 'home'; //css classes for the body
 		$data->body_class = 'weather';
-		$data->basic_content = 'Hola Mundo';
-		$this->load->view('template/basic_animated', $data);
+		$data->left_content = 'confirm_deposit';
+		$data->sidebar = 'sidebar_info';
+		$data->pro_remain = $this->get_remaining_tickets(1);
+		$data->student_remain = $this->get_remaining_tickets(2);
+		$this->load->view('template/columns_animated', $data);
+		
 	}
 	
+	public function subir_consignacion($email){
+		$new_name = explode('.com', $email);
+		$config['upload_path'] = '../../private/uploads/';
+		$config['allowed_types'] = 'jpg|png';
+		$config['max_size']	= '0';
+		$config['max_width']  = '0';
+		$config['max_height']  = '0';
+		$config['file_name'] = $new_name[0];
+		
+		$a = new Attendee();
+		$a->get_by_email($email);
+		$this->load->library('upload', $config);		
+		
+		if(!$this->upload->do_upload('file')){
+			$data->errors = array('error' => $this->upload->display_errors());
+			
+			$this->load->helper('form');
+
+			if(!$a->id){
+				redirect('/');
+			}
+
+			$first_name = explode(" ",$a->name);
+			$data->name = $first_name[0];
+			$data->attendee = $a;
+
+			$data->pro_remain = $this->get_remaining_tickets(1);
+			$data->student_remain = $this->get_remaining_tickets(2);
+
+			$data->title = 'Confirmar Consignación';
+			$data->time_class = $this->day_or_night(); //css classes day or night;
+			$data->main_class = 'home'; //css classes for the body
+			$data->body_class = 'weather';
+			$data->left_content = 'confirm_deposit';
+			$data->sidebar = 'sidebar_info';
+			$data->pro_remain = $this->get_remaining_tickets(1);
+			$data->student_remain = $this->get_remaining_tickets(2);
+			$this->load->view('template/columns_animated', $data);
+		}else{
+			$data = $this->upload->data();
+
+			$config = array( 'email' => '', 'password' => '');
+			$dbx = $this->load->library('DropboxUploader', $config);
+			$dbx = new DropboxUploader($config);
+		
+      $dbx->upload($data['full_path'], 'bconf');
+			$a->upload = 1;
+			$a->save();
+			
+			//TODO:aqui mandamos el mail diciendo que recibimos la imagen
+			$message = '<p>Excelente, hemos recibido tu imágen y estamos verificando tu consignacion.</p>
+			<p>En el momento en el que sea confirmada, te enviaremos tus entradas.</p>
+			';
+			$this->session->set_flashdata('message',$message);
+			redirect('/');
+		}
+	}
 	protected function day_or_night(){
 		$current_time = date("G");
 		// $current_time = 5;
@@ -230,8 +307,64 @@ class Main extends CI_Controller {
 		}
 	}
 	
-	public function test(){
+	public function test_form(){
+			$this->load->helper('form');
+			echo '<html>
+			<head>
+			<title>Upload Form</title>
+			</head>
+			<body>';
+
+			// echo $error;
+
+			echo form_open_multipart('test_upload');
+
+			echo '<input type="file" name="file" size="20" />
+
+			<br /><br />
+
+			<input type="submit" value="upload" />
+
+			</form>
+
+			</body>
+			</html>';
+	}
+	public function test_upload(){
+		$config['upload_path'] = '../../private/uploads/';
+		$config['allowed_types'] = 'gif|jpg|png';
+		$config['max_size']	= '0';
+		$config['max_width']  = '0';
+		$config['max_height']  = '0';
+		$config['file_name'] = 'me@me';
+
+		$this->load->library('upload', $config);
 		
+		
+		if ( ! $this->upload->do_upload('file'))
+		{
+			$error = array('error' => $this->upload->display_errors());
+
+		 fb($error);
+		}
+		else
+		{
+			$data = $this->upload->data();
+			fb($data['full_path']);
+			
+			$config = array( 'email' => 'juanpablo@buritica.org', 'password' => 'Axfxi666');
+			// // $config->email = 'juanpablo@buritica.org';
+			// // $config->password = 'Axfxi666';
+			// 
+			$dbx = $this->load->library('DropboxUploader', $config);
+			$dbx = new DropboxUploader($config);
+		
+      $dbx->upload($data['full_path'], 'bconf');
+			echo 'upload';
+			fb($dbx);
+			echo 'success';
+		}
+
 	}
 
 }

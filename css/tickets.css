@@ -73,3 +73,32 @@
 		}
 	}
 }
+#confirm-deposit{
+	#upload-errors{
+		color: colors.error;
+		margin: 25px 0;
+		padding: 15px;
+		background: colors.beige;
+		border: 3px solid colors.lightergreen;
+	}
+	
+	ul li{
+		line-height: 1.5em;
+	}
+	
+	form#upload{
+		margin-top: 25px;
+		padding: 15px;
+		background: colors.beige;
+		border: 3px solid colors.lightergreen;
+
+		.button{
+			margin-left: 20px;
+			float: right;
+		}
+	}	
+	
+	input[type="file"]{
+		color: colors.darkgreen;
+	}
+}
