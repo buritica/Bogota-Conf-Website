@@ -88,6 +88,10 @@ class Main extends CI_Controller {
 		}
 	}
 	
+	public function purchase_tickets(){
+		
+	}
+	
 	public function update_tickets($id,$quantity){
 		$t = new Ticket();
 		$t->get_by_id($id);

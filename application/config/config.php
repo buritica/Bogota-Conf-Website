@@ -15,7 +15,7 @@
 |
 */
 if(ENV == 'local'){
-	$config['base_url']	= "/bconf/";
+	$config['base_url']	= "http://local.com/bconf/";
 }elseif(ENV == 'dev'){
 	$config['base_url']	= "http://dev.bogotaconf.co/";
 }elseif(ENV == 'live'){
