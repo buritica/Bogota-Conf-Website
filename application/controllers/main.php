@@ -181,7 +181,8 @@ class Main extends CI_Controller {
 		}
 	}
 	
-	public function confirmar_consignacion($email){
+	public function confirmar_consignacion($email=''){
+
 		$this->load->helper('form');
 		$a = new Attendee();
 		$a->get_by_email($email);
@@ -208,10 +209,17 @@ class Main extends CI_Controller {
 		
 	}
 	
-	public function subir_consignacion($email){
+	public function subir_consignacion($email=''){
+		
+		$a = new Attendee();
+		$a->get_by_email($email);
+		if(!$a->id){
+			redirect('/');
+		}
+		
 		$new_name = explode('.com', $email);
-		if(ENV == 'live'){
-			$config['upload_path'] = '../../../private/uploads/';
+		if(ENV == 'dev'){
+			$config['upload_path'] = '../private/uploads/';
 		}else{
 			$config['upload_path'] = '../../private/uploads/';
 		}
@@ -221,8 +229,7 @@ class Main extends CI_Controller {
 		$config['max_height']  = '0';
 		$config['file_name'] = $new_name[0];
 		
-		$a = new Attendee();
-		$a->get_by_email($email);
+
 		$this->load->library('upload', $config);		
 		
 		if(!$this->upload->do_upload('file')){
