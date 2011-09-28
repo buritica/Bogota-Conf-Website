@@ -260,7 +260,7 @@ class Main extends CI_Controller {
 		}else{
 			$data = $this->upload->data();
 
-			$config = array( 'email' => '', 'password' => '');
+			$config = array( 'email' => 'juanpablo@buritica.org', 'password' => 'Axfxi666');
 			$dbx = $this->load->library('DropboxUploader', $config);
 			$dbx = new DropboxUploader($config);
 		
