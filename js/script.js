@@ -39,11 +39,11 @@ bconf.linkAction = function(){
 		
 		switch(dataLink){
 			case 'load-left':
-				contentToLoad = $(this).attr(dataLink);
+				// contentToLoad = $(this).attr();
 				//TODO: Factor!!
 				bconf.layer.transmi.stop().scrollLeft(0).animate({scrollLeft: bconf.transmi.step1}, 2000, 'easeOutExpo');
 				bconf.layer.leftContent.fadeOut(function(){
-					bconf.layer.leftContent.load(contentToLoad, function(){
+					bconf.layer.leftContent.load(href, function(){
 						bconf.layer.leftContent.fadeIn();
 						bconf.layer.transmi.stop().animate({scrollLeft: bconf.status.windowWidth+600}, 2000, 'easeOutExpo');
 						bconf.fixColumnHeights();
