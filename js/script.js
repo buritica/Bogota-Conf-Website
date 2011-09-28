@@ -1,9 +1,9 @@
-//app object
+//app object literal
 var bconf = {
 	layer:{},
 	status:{},
 	findInArray: function(arr,obj) {
-	    return (arr.indexOf(obj) != -1);
+		return (arr.indexOf(obj) != -1);
 	}
 };
 
@@ -53,7 +53,7 @@ bconf.linkAction = function(){
 			case 'lightbox':
 				bconf.layer.overlay.fadeIn();
 				bconf.layer.lightbox.find('#content').load(bconf.baseUrl+href, function(){
-				 $(this).parent().fadeIn().animate({top:($(window).height()-$(this).height())/2});	
+					$(this).parent().fadeIn().animate({top:($(window).height()-$(this).height())/2});	
 				});
 
 				console.log('lightbox');
@@ -74,6 +74,29 @@ bconf.linkAction = function(){
 	
 	$('nav a').click(function(){
 		$(this).addClass('active').siblings().removeClass('active');
+	});
+}
+
+bconf.purchaseSubmitAction = function(){
+	$('body').delegate('form', 'submit', function(e){
+		formData = $(this).serialize();
+		postUrl = $(this).attr('action');
+		$.post(postUrl, formData, function(results){
+			console.log(results);
+			if(results.success == true){
+				$('#purchase').slideUp(function(){
+					$(this).html(results.message).slideDown(function(){
+						bconf.layer.lightbox.animate({top:($(window).height()-$(this).height())/2});
+					});
+				});
+			}else{
+				$('#instructions').slideUp(function(){
+					$(this).html(results.errors).addClass('error').slideDown();
+				});
+			}
+		}, 'json');
+
+		return false;
 	});
 }
 
@@ -126,10 +149,10 @@ bconf.weatherAnimateDouble = function(){
 
 //animations
 bconf.transmiAnimate = function(){
-	bconf.layer.transmi.scrollLeft(0).animate({scrollLeft: bconf.transmi.step1}, 5000, 'easeOutExpo', function(){
-		$(this).delay(1000).animate({scrollLeft: bconf.status.windowWidth+600}, 2000, 'easeOutExpo', function(){
+	bconf.layer.transmi.scrollLeft(0).animate({scrollLeft: bconf.transmi.step1}, 3000, 'easeOutExpo', function(){
+		$(this).delay(1000).animate({scrollLeft: bconf.status.windowWidth+600}, 1000, 'easeOutExpo', function(){
 			// window.setTimeout(function(){
-			// 	bconf.transmiAnimate();
+			//	bconf.transmiAnimate();
 			// },6000);
 		});
 	});
@@ -189,9 +212,10 @@ $(document).ready(function(){
 	//hide flashmessage
 	$('#flash .show').delay(3000).slideUp();
 	
-	//deal with links
+	//event handlers
 	bconf.linkAction();
-
+	// bconf.purchaseSubmitAction();
+	
 	//landingpage script
 	if(bconf.layer.body.hasClass('weather')){
 		bconf.transmiAnimate();
@@ -199,15 +223,15 @@ $(document).ready(function(){
 		bconf.weatherAnimateDouble();
 		
 		//weather
-	 	$.get('http://free.worldweatheronline.com/feed/weather.ashx?q=Bogota&format=json&num_of_days=1&key=3105835f23235510110804',function(weather){
+		$.get('http://free.worldweatheronline.com/feed/weather.ashx?q=Bogota&format=json&num_of_days=1&key=3105835f23235510110804',function(weather){
 			 bconf.setWeather(weather.data.current_condition[0].weatherCode);
-		},'jsonp');	
+		},'jsonp'); 
 
 		//modernizr
 		// if placeholder isn't supported:
-		// 	    if (!Modernizr.input.placeholder){
+		//		if (!Modernizr.input.placeholder){
 		// bconf.noPlaceholder();
-		// 	    }
+		//		}
 	}
 
 	bconf.fixColumnHeights();

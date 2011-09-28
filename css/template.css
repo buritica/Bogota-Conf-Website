@@ -279,7 +279,7 @@ footer{
 #lightbox{
 	position: fixed;
 	width: 350px;
-	min-height: 500px;
+/*	min-height: 500px;*/
 	background: aqua;
 	left: 50%;
 	margin-left: -175px;
@@ -304,7 +304,7 @@ footer{
 	#content{
 		background:colors.beige;
 		width: 320px;
-		min-height: 500px;
+/*		min-height: 500px;*/
 		padding: 15px;
 		color: colors.lightgreen;
 		font-family: fonts.museo;
@@ -378,5 +378,9 @@ h3{font-size: 22px; margin-bottom: .7em;}
 h4{font-size: 18px; margin-bottom: .7em;}
 h5{font-size: 16px; margin-bottom: .7em;}
 h6{font-size: 14px; margin-bottom: .7em;}
+
+.error{
+	color: colors.error;
+}
 
 /*end typography*/

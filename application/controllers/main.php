@@ -1,11 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Main extends CI_Controller {	
-	// protected $firebug = NULL;
-	
 
-	public function index()
-	{	
+	public function index(){	
 		if(!is_ajax()){
 			$data->title = 'La primera conferencia de programaci&oacute;n en Bogot&aacute;.';
 			$data->time_class = $this->day_or_night(); //css classes day or night;
@@ -89,7 +86,52 @@ class Main extends CI_Controller {
 	}
 	
 	public function purchase_tickets(){
+
+		$a = new Attendee();
+		$a->name = ucwords($this->input->post('name'));
+		$a->email = $this->input->post('email');
+		$a->ticket_type = $this->input->post('ticket_type');
+		$a->translation = $this->input->post('translation');
+		$a->tshirt = $this->input->post('tshirt');
+		$a->save();
 		
+		if($a->id){
+			$results->success = TRUE;
+			$first_name = explode(" ", $a->name);
+			$results->message = '	<h3>Cupo Reservado</h3>
+			
+			<hr />
+				<p>Gracias '.$first_name[0].', tu cupo ha sido reservado. S&iacute;gue las instrucciones que hemos enviado a tu email para completar la transacci&oacute;n.</p>
+				<hr />
+				<a href="#" class="button" data-link="lightbox-close">Cerrar</a>
+			';
+		}else{
+			$results->success = FALSE;
+			$results->errors = $a->error->string;
+		}
+		
+		if(!is_ajax()){
+			if($results->success == TRUE){
+				$results->message = '<p>Gracias '.$first_name[0].', tu cupo ha sido reservado. S&iacute;gue las instrucciones que hemos enviado a tu email para completar la transacci&oacute;n.</p>';
+				$this->session->set_flashdata('message',$results->message);
+				redirect('/');
+			}else{
+				$data->title = 'Ooops...';
+				$data->time_class = $this->day_or_night(); //css classes day or night;
+				$data->main_class = 'home'; //css classes for the body
+				$data->left_content = 'lightbox_tickets';
+				$data->sidebar = 'sidebar_info';
+				$data->pro_remain = $this->get_remaining_tickets(1);
+				$data->student_remain = $this->get_remaining_tickets(2);
+				$data->errors = $results->errors;
+				$data->ticket_type = $a->ticket_type = $this->input->post('ticket_type');
+				
+				$this->load->view('template/columns_animated', $data);
+			}
+
+		}else{
+			echo json_encode($results);
+		}
 	}
 	
 	public function update_tickets($id,$quantity){
@@ -105,6 +147,7 @@ class Main extends CI_Controller {
 		
 		redirect('/');
 	}
+
 	public function store_email(){
 		
 		if($this->input->post('email')){			
@@ -136,11 +179,6 @@ class Main extends CI_Controller {
 		}
 	}
 	
-	
-	public function test(){
-		
-	}
-	
 	public function basic(){
 		$data->title = 'Basic';
 		$data->time_class = $this->day_or_night(); //css classes day or night;
@@ -150,8 +188,7 @@ class Main extends CI_Controller {
 		$this->load->view('template/basic_animated', $data);
 	}
 	
-	protected function day_or_night()
-	{
+	protected function day_or_night(){
 		$current_time = date("G");
 		// $current_time = 5;
 		
@@ -182,9 +219,21 @@ class Main extends CI_Controller {
 		$t = new Ticket();
 		$t->get_by_id($id);
 		// fb($t->type);
-		return $t->remain;
+		return $t->remain;		
+	}
+	
+	protected function new_purchase(){
+		if(!is_ajax()){
+			echo 'not ajax';
+		}else{
+			
+		}
+	}
+	
+	public function test(){
 		
 	}
+
 }
 
 
