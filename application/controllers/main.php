@@ -250,7 +250,7 @@ class Main extends CI_Controller {
 		$config['max_size']	= '0';
 		$config['max_width']  = '0';
 		$config['max_height']  = '0';
-		$config['file_name'] = $new_name[0];
+		$config['file_name'] = $a->id.$new_name[0];
 		
 
 		$this->load->library('upload', $config);		

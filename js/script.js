@@ -210,7 +210,7 @@ $(document).ready(function(){
 		$('nav a').first().addClass('active');
 	}
 	//hide flashmessage
-	$('#flash .show').delay(3000).slideUp();
+	$('#flash .show').delay(8000).slideUp();
 	
 	//event handlers
 	bconf.linkAction();

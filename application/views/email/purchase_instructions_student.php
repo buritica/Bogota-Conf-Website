@@ -23,7 +23,7 @@ a:visited { color: #fff !important; }
                     <p>A partir de este momento, tienes <strong>48 horas</strong> para confirmar tu reserva. Para esto debes hacer lo siguiente:</p>
 <p>1). Consignar la suma de $70,000 en la cuenta 005-57104-2 del Helm Bank a nombre de Carlos Rozo. Puedes encontrar sucursales en tu ciudad en <a href="https://www.grupohelm.com/AdmonOficinas/admon/UsrBuscarOficinas.do"  style="color: #000;">https://www.grupohelm.com/AdmonOficinas/admon/UsrBuscarOficinas.do</a></p>
 <p>2). Escanear o tomar una foto de tu carnet estudiantil <strong style="color: #000;">vigente</strong> junto a la consignación (escribe tu mail en la consignación). Los dos documentos deben estar en la misma imágen.</p>
-<p>3). Ir a <a href="<?php echo base_url().'confirmar_consignacion/'.$attendee->email ?>"  style="color: #000;"><?php echo base_url().'/confirmar_consignacion/'.$attendee->email ?></a> y sube la imagen de tu carnet con la consignación.</p>
+<p>3). Ir a <a href="<?php echo base_url().'confirmar_consignacion/'.$attendee->email ?>"  style="color: #000;"><?php echo base_url().'confirmar_consignacion/'.$attendee->email ?></a> y sube la imagen de tu carnet con la consignación.</p>
 <p>Cuando el equipo de BogotaConf confirme tu consignación, recibirás un mail con tus entradas. Guarda la consignación ya que esta será tu recibo. Las entradas no reflejarán el precio de la entrada debido al método de compra.</p>
 <p>Si tienes preguntas, o problemas, envianos un mail a hola@bogotaconf.co desde la cuenta registrada y te responderemos cuanto antes.</p>
 
