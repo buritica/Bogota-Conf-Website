@@ -18,7 +18,8 @@ a:visited { color: #fff !important; }
 		<table background="http://bogotaconf.co/img/mailer/bg_lightgreen_noise_small.jpg" width="600" height="" cellspacing="" cellpadding="" style="margin: 0 auto;" align="center"><tr>
 <td height="" width="100%" style="font-size: 14px; line-height: 19px; margin: 0 auto; padding: 40px 20px 20px;">
 					<p>Hola <?php echo first_name($attendee->name); ?>!</p>
-					<p>Desafortunadamente no tenemos cupos disponibles pero aun hay entradas sin confirmar su pago, asi que apenas liberemos algunas te enviaremos un email con las instrucciones de pago.</p>
+					<p>Desafortunadamente no tenemos cupos disponibles. Aún así todavia hay entradas sin confirmar su pago, asi que apenas liberemos algunas te enviaremos un email con las instrucciones de pago.</p>
+					<p>No te preocupes, los cupos serán enviados en el mismo orden de registro.</p>
 
 <p>Muchas gracias por tu apoyo,</p>
 <p>El equipo de bogotaconf.</p>
