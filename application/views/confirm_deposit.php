@@ -1,7 +1,7 @@
 <div id="confirm-deposit">
 	
 	<?php if(!$attendee->upload) :?>
-		<h3>Hola <?php echo $name ?>, confirma tu consignación aqui:</h3>
+		<h3>Hola <?php echo first_name($attendee->name) ?>, confirma tu consignación aqui:</h3>
 		<hr />
 		<?php if(isset($errors)) : ?>
 		<div id="upload-errors">

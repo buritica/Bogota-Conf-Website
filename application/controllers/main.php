@@ -86,7 +86,6 @@ class Main extends CI_Controller {
 	}
 	
 	public function purchase_tickets(){
-
 		$a = new Attendee();
 		$a->name = ucwords($this->input->post('name'));
 		$a->email = $this->input->post('email');
@@ -96,26 +95,65 @@ class Main extends CI_Controller {
 		$a->save();
 		
 		if($a->id){
-			$results->success = TRUE;
-			$first_name = explode(" ", $a->name);
-			$results->message = '	<h3>Cupo Reservado</h3>
+			$results->success = TRUE;			
+			$message->to = $a->email;
+			$message->attendee = $a;
 			
-			<hr />
-				<p>Gracias '.$first_name[0].', tu cupo ha sido reservado. S&iacute;gue las instrucciones que hemos enviado a tu email para completar la transacci&oacute;n.</p>
-				<hr />
-				<a href="#" class="button" data-link="lightbox-close">Cerrar</a>
-			';
+			//user saved, get remaining tickets
+			$all = new Attendee();
+			if($a->ticket_type == 'student'){
+				$remain = $this->get_remaining_tickets(2);
+				$message->template = 'email/purchase_instructions_student';
+			}else{
+				$remain = $this->get_remaining_tickets(1);
+				$message->template = 'email/purchase_instructions_pro';
+			}
 			
-			//TODO: aqui enviamos el mail de instrucciones
+			
+			//if we have remaining tickets, send email and success response
+			if($remain > 0){
+				$message->subject = 'Instrucciones para confirmar tu compra';
+				
+				//set templates & update tickets
+				if($a->ticket_type == 'student'){
+					$message->template = 'email/purchase_instructions_student';
+					$this->update_tickets(2,$remain-1);
+				}else{
+					$message->template = 'email/purchase_instructions_pro';
+					$this->update_tickets(1,$remain-1);
+				}
+				
+				//set messages
+				$results->flash = '<p>Gracias '.first_name($a->name).', tu cupo ha sido reservado. S&iacute;gue las instrucciones que hemos enviado a tu email para completar la transacci&oacute;n.</p>';
+
+				$results->message = '	<h3>Cupo Reservado</h3><hr />
+						<p>Gracias '.first_name($a->name).', tu cupo ha sido reservado. S&iacute;gue las instrucciones que hemos enviado a tu email para completar la transacci&oacute;n.</p><hr />
+						<a href="#" class="button" data-link="lightbox-close">Cerrar</a>';			
+
+				
+			}else{//add to queue
+				$message->template = 'email/waiting';
+				$message->subject = 'Te hemos agregado a la lista de espera';
+				
+				//set messages
+				$results->flash = '<p>Gracias '.first_name($a->name).', te hemos agregado a la lista de espera. Si se liberan cupos te enviaremos un email en el mismo orden en el que te registraste.</p>';
+
+				$results->message = '	<h3>Lista de Espera</h3><hr />
+					<p>Gracias '.first_name($a->name).', te hemos agregado a la lista de espera. Si se liberan cupos te enviaremos un email en el mismo orden en el que te registraste.</p><hr />
+					<a href="#" class="button" data-link="lightbox-close">Cerrar</a>';
+			}
+			//send email
+			$this->send_email($message);
 		}else{
 			$results->success = FALSE;
 			$results->errors = $a->error->string;
 		}
 		
+		//return results
 		if(!is_ajax()){
 			if($results->success == TRUE){
-				$results->message = '<p>Gracias '.$first_name[0].', tu cupo ha sido reservado. S&iacute;gue las instrucciones que hemos enviado a tu email para completar la transacci&oacute;n.</p>';
-				$this->session->set_flashdata('message',$results->message);
+
+				$this->session->set_flashdata('message',$results->flash);
 				redirect('/');
 			}else{
 				$data->title = 'Ooops...';
@@ -134,22 +172,9 @@ class Main extends CI_Controller {
 		}else{
 			echo json_encode($results);
 		}
+		
 	}
 	
-	public function update_tickets($id,$quantity){
-		$t = new Ticket();
-		$t->get_by_id($id);
-		// fb($t->type);
-		$t->remain = $quantity;
-		if($t->save()){
-			fb('Tickets remaining for '.$t->type.' updated to: '.$t->remain, 'Success');
-		}else{
-			fb('Updating tickets failed', 'Error:');
-		}
-		
-		redirect('/');
-	}
-
 	public function store_email(){
 		
 		if($this->input->post('email')){			
@@ -190,10 +215,8 @@ class Main extends CI_Controller {
 			redirect('/');
 		}
 		
-		$first_name = explode(" ",$a->name);
-		$data->name = $first_name[0];
 		$data->attendee = $a;
-		
+
 		$data->pro_remain = $this->get_remaining_tickets(1);
 		$data->student_remain = $this->get_remaining_tickets(2);
 		
@@ -269,13 +292,21 @@ class Main extends CI_Controller {
 			$a->save();
 			
 			//TODO:aqui mandamos el mail diciendo que recibimos la imagen
-			$message = '<p>Excelente, hemos recibido tu imágen y estamos verificando tu consignacion.</p>
+			$message->template = 'email/upload_confirmation';
+			$message->subject = 'Consignación Recibida';
+			$message->to = $a->email;
+			$message->attendee = $a;
+			
+			$this->send_email($message);
+			
+			$message = '<p>Excelente, hemos recibido tu imágen y estamos verificando tu consignación.</p>
 			<p>En el momento en el que sea confirmada, te enviaremos tus entradas.</p>
 			';
 			$this->session->set_flashdata('message',$message);
 			redirect('/');
 		}
 	}
+
 	protected function day_or_night(){
 		$current_time = date("G");
 		// $current_time = 5;
@@ -296,10 +327,10 @@ class Main extends CI_Controller {
 		return $time;
 	}
 	
-	protected function email($email){
+	protected function send_email($data){
 		
-		$data->email = $email;
-		user_notify_postmark('email/maillist', 'Hemos guardado tu email.', $email, $data);
+		user_notify_postmark($data);
+	
 	}	
 	
  	protected function get_remaining_tickets($id){
@@ -310,13 +341,14 @@ class Main extends CI_Controller {
 		return $t->remain;		
 	}
 	
-	protected function new_purchase(){
-		if(!is_ajax()){
-			echo 'not ajax';
-		}else{
-			
-		}
+	protected function update_tickets($id,$quantity){
+		$t = new Ticket();
+		$t->get_by_id($id);
+		// fb($t->type);
+		$t->remain = $quantity;
+		$t->save();
 	}
+	
 }
 
 

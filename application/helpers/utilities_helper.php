@@ -130,16 +130,18 @@ if(!function_exists('user_notify')){
 
 //notify user
 if(!function_exists('user_notify_postmark')){
-	function user_notify_postmark($view, $subject, $to, $data){
+	function user_notify_postmark($data){
+		
+		
 		$CI =& get_instance();
 		
 		$CI->load->library('postmark');
 		
-		$message = $CI->load->view($view, $data, TRUE);
-		$message_plain = $CI->load->view($view.'_plain', $data, TRUE);
+		$message = $CI->load->view($data->template, $data, TRUE);
+		$message_plain = $CI->load->view($data->template.'_plain', $data, TRUE);
 		
-		$CI->postmark->to($to);
-		$CI->postmark->subject($subject);
+		$CI->postmark->to($data->to);
+		$CI->postmark->subject($data->subject);
 		$CI->postmark->message_plain($message_plain);
 		$CI->postmark->message_html($message);
 		$CI->postmark->send();
@@ -153,6 +155,16 @@ if(!function_exists('string_encrypt')){
 		$CI =& get_instance();
 		$str = sha1($str.$CI->config->item('encryption_key'));
 		return $str;
+		}
+	}
+}
+
+//first name
+if(!function_exists('first_name')){
+	function first_name($str){
+		if (!empty($str)){
+			$first_name = explode(" ",$str);
+			return $first_name[0];
 		}
 	}
 }
