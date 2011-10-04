@@ -61,7 +61,13 @@
 				background: url('../img/bio_acolmenares.jpg') 0 0 no-repeat;
 			}
 			&.buritica{
+				background: url('../img/bio_buritica2.jpg') 0 0 no-repeat;
+			}
+			&.buritica2{
 				background: url('../img/bio_buritica.jpg') 0 0 no-repeat;
+			}
+			&.crozo{
+				background: url('../img/bio_crozo.jpg') 0 0 no-repeat;
 			}
 
 		}
