@@ -35,6 +35,7 @@
 								S<input type="radio" name="tshirt" id="" value="s" required="true"/>
 								M<input type="radio" name="tshirt" id="" value="m" checked="checked" tabindex="15"required="true" />
 								L<input type="radio" name="tshirt" id="" value="l" required="true" />
+								XL<input type="radio" name="tshirt" id="" value="l" required="true" />
 							</li>
 						</ul>
 		</fieldset>
