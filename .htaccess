@@ -12,3 +12,15 @@
 	RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteRule ^(.*)$ index.php/$1 [L]
 </IfModule>
+
+# ----------------------------------------------------------------------
+# Cross-domain AJAX requests
+# ----------------------------------------------------------------------
+
+# Serve cross-domain ajax requests, disabled.
+# enable-cors.org
+# code.google.com/p/html5security/wiki/CrossOriginRequestSecurity
+
+ <IfModule mod_headers.c>
+   Header set Access-Control-Allow-Origin "*"
+ </IfModule>
