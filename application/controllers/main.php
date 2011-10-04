@@ -349,6 +349,12 @@ class Main extends CI_Controller {
 		$t->save();
 	}
 	
+	public function test(){
+		$a = new Attendee();
+		$a->get_by_id(1);
+		$data->attendee = $a;
+		$this->load->view('email/waiting', $data);
+	}
 }
 
 
