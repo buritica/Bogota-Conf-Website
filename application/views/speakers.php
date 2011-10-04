@@ -38,7 +38,7 @@
 		<div class="bio">
 			<h3 class="name">Edgar Gonzalez</h3>
 			<!-- <h5 class="talk"></h5> -->
-			<p>Agile web developer y project manager, Experto en Ruby on Rails, Rey del API en <a href="http://piictu.com/" target="_blank">Piictu</a>, tambi&eacute; CTO en<a href="http://www.HasManyDevelopers.com" target="_blank">HasManyDevelopers.com</a> y <a href="http://rubycorner.com" target="_blank"> y es cofundador de otras iniciativas como rubycorner.com</a></p>
+			<p>Agile web developer y project manager, Experto en Ruby on Rails, Rey del API en <a href="http://piictu.com/" target="_blank">Piictu</a>, tambi&eacute; CTO en <a href="http://www.HasManyDevelopers.com" target="_blank">HasManyDevelopers.com</a> y es cofundador de otras iniciativas como<a href="http://rubycorner.com" target="_blank">RubyCorner</a></a></p>
 			<p>Es profesor de Ciencias de la computaci&oacute;n en la Universidad Central de Venezuela</p>
 		</div>				
 	</div>
