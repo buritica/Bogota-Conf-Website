@@ -223,7 +223,9 @@ class Main extends CI_Controller {
 	}
 	
 	public function confirmar_consignacion($email=''){
-
+		if(strpos($email, '%40')){
+			$email = str_replace('%40', '@', $email);
+		}
 		$this->load->helper('form');
 		$a = new Attendee();
 		$a->get_by_email($email);
@@ -366,7 +368,6 @@ class Main extends CI_Controller {
 	}
 	
 	public function test(){
-		
 	}
 }
 
