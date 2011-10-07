@@ -11,4 +11,43 @@
 			background: white;
 		}
 	}
+	
+	#sponsors{
+					background: colors.beige;
+					padding: 15px;
+					color: colors.darkgreen;
+					margin-bottom: 15px;
+					width: 270px;
+					
+					h4,h5{
+						font-family: fonts.museo;
+					}
+		.sponsor{
+			display: inline-block;
+			margin: 10px auto;
+			
+			&.panelfly{
+				width: 270px;
+				height: 69px;
+				background: url('../img/sponsor_panelfly.png') 0 0 no-repeat;
+			}			
+			&.koombea{
+				width: 270px;
+				height: 49px;
+				background: url('../img/sponsor_koombea.png') 0 0 no-repeat;
+			}
+			&.pulsosocial{
+				width: 270px;
+				height: 70px;
+				background: url('../img/sponsor_pulsosocial.png') 0 0 no-repeat;
+			}
+			&.onswipe{
+				width: 100px;
+				height: 114px;
+				background: url('../img/sponsor_onswipe.png') 0 0 no-repeat;
+				margin-left:85px;
+			}
+		}
+		
+	}
 }
