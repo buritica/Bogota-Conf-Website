@@ -12,6 +12,29 @@
 		</div>				
 	</div>
 	<div class="speaker">
+		<div class="avatar agares">
+			<a href="http://twitter.com/#!/_agares_" target="_blank" class="twitter"></a>
+		</div>
+		<div class="bio">
+
+			<h3 class="name">Giovanny Beltrán</h3>
+
+			<p>Le gusta el desarrollo y las metodologías Agiles, interesado en el emprendimiento y en la forma de motivar a más programadores para que inicien sus propias startups.</p>
+		</div>				
+	</div>
+	<div class="speaker">
+		<div class="avatar jorgep">
+			<a href="http://twitter.com/#!/8manos" target="_blank" class="twitter"></a>
+		</div>
+		<div class="bio">
+
+			<h3 class="name">Jorge Parada</h3>
+
+			<p>Fotógrafo de profesión, desarrollador web en el día a día. Especializado en front-end y participante activo de la comunidad de desarrollo de WordPress.</p>
+			<p>Trabaja en la web desde hace 10 años, cofundador de 8manos y coordinador de proyectos en la misma empresa.</p>
+		</div>				
+	</div>
+	<div class="speaker">
 		<div class="avatar buritica2">
 			<a href="http://twitter.com/#!/buritica" target="_blank" class="twitter"></a>
 		</div>

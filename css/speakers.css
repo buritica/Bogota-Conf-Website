@@ -69,6 +69,12 @@
 			&.crozo{
 				background: url('../img/bio_crozo.jpg') 0 0 no-repeat;
 			}
+			&.jorgep{
+				background: url('../img/bio_8manos.jpg') 0 0 no-repeat;
+			}
+			&.agares{
+				background: url('../img/bio_agares.jpg') 0 0 no-repeat;
+			}
 
 		}
 

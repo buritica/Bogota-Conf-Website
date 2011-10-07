@@ -258,7 +258,7 @@ class Main extends CI_Controller {
 			redirect('/');
 		}
 		
-		$new_name = explode('.com', $email);
+		$new_name = explode('.', $email);
 		if(ENV == 'dev'){
 			$config['upload_path'] = '../private/uploads/';
 		}else{
