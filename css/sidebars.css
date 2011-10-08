@@ -31,6 +31,12 @@
 				height: 69px;
 				background: url('../img/sponsor_panelfly.png') 0 0 no-repeat;
 			}			
+			&.github{
+				width: 220px;
+				height: 97px;
+				background: url('../img/sponsor_github.png') 0 0 no-repeat;
+				margin-left: 25px;
+			}
 			&.koombea{
 				width: 270px;
 				height: 49px;

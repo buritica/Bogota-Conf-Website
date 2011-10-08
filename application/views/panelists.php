@@ -17,7 +17,7 @@
 		</div>
 		<div class="bio">
 			<h3 class="name">Andr&eacute;s Barreto</h3>
-			<p>Emprendedor Colombiando residente en New York. Cofundador de <a href="http://grooveshark.com/" target="_blank">Grooveshark</a>, <a href="http://onswipe.com/" target="_blank">onSwipe</a> y <a href="http://pulsosocial.com">PulsoSocial</a>.</p>
+			<p>Emprendedor Colombiano residente en New York. Cofundador de <a href="http://grooveshark.com/" target="_blank">Grooveshark</a>, <a href="http://onswipe.com/" target="_blank">onSwipe</a> y <a href="http://pulsosocial.com">PulsoSocial</a>.</p>
 		</div>				
 	</div>
 	<div class="speaker">

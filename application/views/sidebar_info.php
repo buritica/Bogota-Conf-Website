@@ -3,6 +3,8 @@
 	<div id="sponsors">
 		<h5>Platinum</h5>
 		<a href="http://panelfly.com" class="sponsor panelfly" target="_blank"></a>
+		<h5>Gold</h5>
+		<a href="http://github.com" class="sponsor github" target="_blank"></a>
 		<h5>Silver</h5>
 		<a href="http://koombea.com" class="sponsor koombea" target="_blank"></a>
 		<h5>Media Partners</h5>
