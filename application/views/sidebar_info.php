@@ -16,7 +16,6 @@
 	<h4>&iquest;Cu&aacute;ndo?</h4>
 	<ul class="cost">
 		<li>7am - 4pm, 31 de Oct&uacute;bre, 2011.</li>
-		<!-- <li>Uniandinos. Calle 92 No. 16 - 11</li> -->
 		<li> Bogot&aacute;, Colombia.</li>
 	</ul>
 	<h4>&iquest;Cu&aacute;nto cuesta?</h4>
@@ -33,7 +32,9 @@
 		<li>Entradas profesionales a la venta en <a href="http://bogotaconf.eventbrite.com" target="_blank">Eventbrite</a></li>
 	</ul>
 	<h4>&iquest;D&oacute;nde?</h4>
-	<p>Por confirmar</p>
+	<ul>
+		<li>Uniandinos. Calle 92 No. 16 - 11</li>
+	</ul>
 	<h4>Contacto</h4>
 	<p><a href="http://twitter.com/#!/bogotaconf" target="_blank">@bogotaconf</a></p>
 	<p>hola [a] bogotaconf.co</a></p>
