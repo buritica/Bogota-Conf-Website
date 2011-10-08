@@ -46,7 +46,7 @@ bconf.linkAction = function(){
 					bconf.layer.leftContent.load(href, function(){
 						bconf.layer.leftContent.fadeIn();
 						bconf.layer.transmi.stop().animate({scrollLeft: bconf.status.windowWidth+600}, 2000, 'easeOutExpo');
-						bconf.fixColumnHeights();
+						// bconf.fixColumnHeights();
 						try{
 							window.history.pushState(null, 'BogotaConf 2011', contentToLoad);
 						}catch(Exception){
@@ -236,7 +236,7 @@ $(document).ready(function(){
 		//		}
 	}
 
-	bconf.fixColumnHeights();
+	// bconf.fixColumnHeights();
 	
 	
 });
