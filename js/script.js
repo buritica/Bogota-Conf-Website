@@ -39,7 +39,7 @@ bconf.linkAction = function(){
 		
 		switch(dataLink){
 			case 'load-left':
-				// contentToLoad = $(this).attr();
+				contentToLoad = $(this).attr('load-left');
 				//TODO: Factor!!
 				bconf.layer.transmi.stop().scrollLeft(0).animate({scrollLeft: bconf.transmi.step1}, 2000, 'easeOutExpo');
 				bconf.layer.leftContent.fadeOut(function(){
@@ -47,6 +47,11 @@ bconf.linkAction = function(){
 						bconf.layer.leftContent.fadeIn();
 						bconf.layer.transmi.stop().animate({scrollLeft: bconf.status.windowWidth+600}, 2000, 'easeOutExpo');
 						bconf.fixColumnHeights();
+						try{
+							window.history.pushState(null, 'BogotaConf 2011', contentToLoad);
+						}catch(Exception){
+							
+						}
 					});
 				});
 				break;
@@ -56,12 +61,10 @@ bconf.linkAction = function(){
 					$(this).parent().fadeIn().animate({top:($(window).height()-$(this).height())/2});	
 				});
 
-				console.log('lightbox');
 				break;
 			case 'lightbox-close':
 				bconf.layer.overlay.fadeOut();
 				bconf.layer.lightbox.fadeOut();
-				console.log('lightbox close');
 				break;
 			default:
 				return true;
@@ -82,7 +85,6 @@ bconf.purchaseSubmitAction = function(){
 		formData = $(this).serialize();
 		postUrl = $(this).attr('action');
 		$.post(postUrl, formData, function(results){
-			console.log(results);
 			if(results.success == true){
 				$('#purchase').slideUp(function(){
 					$(this).html(results.message).slideDown(function(){
