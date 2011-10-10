@@ -53,6 +53,12 @@
 				background: url('../img/sponsor_onswipe.png') 0 0 no-repeat;
 				margin-left:85px;
 			}
+			&.founders{
+				width: 260px;
+				height: 124px;
+				background: url('../img/sponsor_founders.png') 0 0 no-repeat;
+				margin-left:5px;
+			}
 		}
 		
 	}

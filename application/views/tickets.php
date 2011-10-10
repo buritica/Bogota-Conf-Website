@@ -3,9 +3,6 @@
 		<h4>100 entradas para Profesionales - (Quedan <?php echo $pro_remain ?>).</h4>
 		<ul>
 			<li>
-				$130,000 (US$69) hasta el 10 de Octubre
-			</li>
-			<li>
 				$150,000 (US$79) hasta el 29 de Octubre
 			</li>
 		</ul>
@@ -19,9 +16,6 @@
 		<hr />
 		<h4>50 entradas para Estudiantes - (Quedan <?php echo $student_remain ?>).</h4>
 		<ul>
-			<li>
-				$70,000 hasta el 10 de Octubre
-			</li>
 			<li>
 				$90,000 hasta el 29 de Octubre
 			</li>
