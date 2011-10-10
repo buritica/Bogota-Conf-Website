@@ -10,12 +10,6 @@
 			<li>50 Cupos para Estudiantes</li>
 			<li>100 Cupos para Profesionales</li>
 		</ul>
-		<p>Antes del 10 de Octubre</p>
-		<ul class="cost">
-			<li>Estudiantes: $70,000</li>
-			<li>Profesionales: $130,000</li>
-		</ul>
-		<p>Despues del 10 al 30 de Octubre</p>
 		<ul class="cost">
 			<li>Estudiantes: $90,000</li>
 			<li>Profesionales: $150,000</li>

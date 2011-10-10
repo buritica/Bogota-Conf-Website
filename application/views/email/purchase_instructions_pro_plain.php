@@ -4,7 +4,7 @@ Gracias por haber reservado tu entrada para BogotaConf.
 
 A partir de este momento, tienes 48 horas para confirmar tu reserva. Para esto debes hacer lo siguiente:
 
-1). Consignar la suma de $130,000 en la cuenta 005-57104-2 del Helm Bank a nombre de Carlos Rozo. Puedes encontrar sucursales en tu ciudad en https://www.grupohelm.com/AdmonOficinas/admon/UsrBuscarOficinas.do
+1). Consignar la suma de $150,000 en la cuenta 005-57104-2 del Helm Bank a nombre de Carlos Rozo. Puedes encontrar sucursales en tu ciudad en https://www.grupohelm.com/AdmonOficinas/admon/UsrBuscarOficinas.do
 
 2). Escanear o tomar una foto consignación (escribe tu mail en la consignación). Los dos documentos deben estar en la misma imágen.
 

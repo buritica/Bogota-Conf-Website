@@ -20,7 +20,7 @@
 
                     <p>Gracias por haber reservado tu entrada para BogotaConf.</p>
                     <p>A partir de este momento, tienes <strong>48 horas</strong> para confirmar tu reserva. Para esto debes hacer lo siguiente:</p>
-<p>1). Consignar la suma de $130,000 en la cuenta 005-57104-2 del Helm Bank a nombre de Carlos Rozo. Puedes encontrar sucursales en tu ciudad en <a href="https://www.grupohelm.com/AdmonOficinas/admon/UsrBuscarOficinas.do"  style="color: #000;">https://www.grupohelm.com/AdmonOficinas/admon/UsrBuscarOficinas.do</a></p>
+<p>1). Consignar la suma de $150,000 en la cuenta 005-57104-2 del Helm Bank a nombre de Carlos Rozo. Puedes encontrar sucursales en tu ciudad en <a href="https://www.grupohelm.com/AdmonOficinas/admon/UsrBuscarOficinas.do"  style="color: #000;">https://www.grupohelm.com/AdmonOficinas/admon/UsrBuscarOficinas.do</a></p>
 <p>2). Escanear o tomar una foto de tu consignación (escribe tu mail en la consignación).</p>
 <p>3). Ir a <a href="<?php echo base_url().'confirmar_consignacion/'.$attendee->email ?>"  style="color: #000;"><?php echo base_url().'confirmar_consignacion/'.$attendee->email ?></a> y sube la imagen de tu consignación.</p>
 <p>Cuando el equipo de BogotaConf confirme tu consignación, recibirás un mail con tus entradas. Guarda la consignación ya que esta será tu recibo. Las entradas no reflejarán el precio de la entrada debido al método de compra.</p>
