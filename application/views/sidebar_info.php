@@ -7,10 +7,12 @@
 		<a href="http://github.com" class="sponsor github" target="_blank"></a>
 		<h5>Silver</h5>
 		<a href="http://koombea.com" class="sponsor koombea" target="_blank"></a>
+		<a href="http://cointernet.com.co" class="sponsor puntoco" target="_blank"></a>
 		<h5>Media Partners</h5>
 		<a href="http://pulsosocial.com" class="sponsor pulsosocial" target="_blank"></a>
 		<h5>Con el apoyo de:</h5>
 		<a href="http://onswipe.com" class="sponsor onswipe" target="_blank"></a>
+		<a href="http://thoughtbot.com" class="sponsor thoughtbot" target="_blank"></a>
 		<a href="http://founderinstitute.com/" class="sponsor founders" target="_blank"></a>
 		
 		

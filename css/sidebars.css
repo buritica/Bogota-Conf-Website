@@ -59,6 +59,18 @@
 				background: url('../img/sponsor_founders.png') 0 0 no-repeat;
 				margin-left:5px;
 			}
+			&.thoughtbot{
+				width: 260px;
+				height: 106px;
+				background: url('../img/sponsor_thoughtbot.png') 0 0 no-repeat;
+				margin-left:5px;
+			}
+			&.puntoco{
+				width: 130px;
+				height: 117px;
+				background: url('../img/sponsor_puntoco.png') 0 0 no-repeat;
+				margin-left:65px;
+			}
 		}
 		
 	}
