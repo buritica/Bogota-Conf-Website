@@ -1,5 +1,5 @@
 <div id="agenda">
-		<h2 class="title">Programa</h2>
+		<h2 class="title">Agenda</h2>
 		
 		<table id="schedule">
 			<tr>
