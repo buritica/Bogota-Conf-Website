@@ -11,9 +11,10 @@
 		<h5>Media Partners</h5>
 		<a href="http://pulsosocial.com" class="sponsor pulsosocial" target="_blank"></a>
 		<h5>Con el apoyo de:</h5>
-		<a href="http://monoku.com" class="sponsor monoku" target="_blank"></a>
 		<a href="http://onswipe.com" class="sponsor onswipe" target="_blank"></a>
 		<a href="http://thoughtbot.com" class="sponsor thoughtbot" target="_blank"></a>
+		<a href="http://monoku.com" class="sponsor monoku" target="_blank"></a>
+		<a href="http://torrenegralabs.com" class="sponsor torrenegra" target="_blank"></a>
 		<a href="http://founderinstitute.com/" class="sponsor founders" target="_blank"></a>
 		
 		

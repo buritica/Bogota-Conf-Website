@@ -76,6 +76,11 @@
 				height: 73px;
 				background: url('../img/sponsor_monoku.png') 0 0 no-repeat;
 			}
+			&.torrenegra{
+				width: 270px;
+				height: 38px;
+				background: url('../img/sponsor_torrenegra.png') 0 0 no-repeat;
+			}
 		}
 		
 	}
