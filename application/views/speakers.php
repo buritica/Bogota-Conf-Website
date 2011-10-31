@@ -1,5 +1,15 @@
 <div id="speakers">
-	<h2 class="title">Conferencistas - 6 invitados internacionales.</h2>
+	<h2 class="title">Conferencistas - 7 conferencistas.</h2>
+	<div class="speaker">
+		<div class="avatar davsket">
+			<a href="http://twitter.com/#!/davsket" target="_blank" class="twitter"></a>
+		</div>
+		<div class="bio">
+			<h3 class="name">David Avellaneda</h3>
+			<h5 class="talk"> Desarrollando un framework de animaciones en Canvas</h5>
+			<p>Ingeniero de sistemas cofundador y front-end developer en <a href="http//monoku.com" target="_blank">Monoku</a>. Actualmente trabaja en el desarrollo de <a href="http://monomi.co" target="_blank">monomi.co</a> (una tienda: furytienda.monomi.co) y ha desarrollado diferentes páginas y aplicaciones web como monoku.com y <a href="http://wall.sipoteburrito.com" target="_blank">wall.sipoteburrito.com.</a></p>
+		</div>				
+	</div>
 	<div class="speaker">
 		<div class="avatar mojombo">
 			<a href="http://twitter.com/#!/mojombo" target="_blank" class="twitter"></a>
@@ -16,7 +26,7 @@
 		</div>
 		<div class="bio">
 			<h3 class="name">Paul Irish</h3>
-			<!-- <h5 class="talk"></h5> -->
+			<h5 class="talk"> Sesión de Preguntas y Respuestas - (skype)</h5>
 			<p>Front-end Developer y diseñador de UX. Es parte del equipo de Relaciones de Google Chrome, al igual que el de jQuery. Miembro de <a href="http://yayquery.com/" target="_blank">yayQuery</a>, un Podcast sobre JavaScript.</p>
 			<p>Mantiene activamente varios proyectos Open Source, tales como <a href="http://modernizr.com" target="_blank">modernizr</a> y <a href="http://h5bp.com" target="_blank">html5boilerplate.</a></p>
 		</div>				
@@ -37,7 +47,8 @@
 		</div>
 		<div class="bio">
 			<h3 class="name">Edgar Gonzalez</h3>
-			<!-- <h5 class="talk"></h5> -->
+			<h5 class="talk">Introducción a NoSQL</h5>
+
 			<p>Agile web developer y project manager, Experto en Ruby on Rails, Rey del API en <a href="http://piictu.com/" target="_blank">Piictu</a>, tambi&eacute; CTO en <a href="http://www.HasManyDevelopers.com" target="_blank">HasManyDevelopers.com</a> y es cofundador de otras iniciativas como<a href="http://rubycorner.com" target="_blank">RubyCorner</a></a></p>
 			<p>Es profesor de Ciencias de la computaci&oacute;n en la Universidad Central de Venezuela</p>
 		</div>				
@@ -48,7 +59,7 @@
 		</div>
 		<div class="bio">
 			<h3 class="name">Sebastian Delmont</h3>
-			<h5 class="talk">Trucos y Tips para programacion Android</h5>
+			<h5 class="talk">Android a 2600 metros</h5>
 			<p>Cofundador y CTO de <a href="http://StreetEasy.com" target="_blank">StreetEasy.com</a> en New York. Sebastian es bastante activo en las comunidades de desarrollo tanto de Ruby como de Android.</p><p> Sebastián tiene m&aacute;s de 15 a&nacute;os de experiencia en ingenier&iacute;a de software, incluyendo loquesea.com a finales de los 90. También ha sido parte del equipo de Android en el desarrollo Gilt, <a href="http://hootsuite.com/" target="_blank">Hootsuite</a> y <a href="http://groupme.com/" target="_blank">GroupMe</a>.</p>
 
 		</div>				

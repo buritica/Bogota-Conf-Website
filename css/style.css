@@ -95,6 +95,7 @@ a:hover { color: colors.darkgreen; }
 @import 'sidebars.css';
 @import 'speakers.css';
 @import 'tickets.css';
+@import 'agenda.css';
 
 /*end import*/
 .ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }

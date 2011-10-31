@@ -11,7 +11,7 @@ if(!defined('BASEPATH')) exit('No direct script access allowed');
 	<footer>
 		<div class="wrapper">
 			<p>
-				bogotaconf es un evento SIN ANIMO DE LUCRO
+				bogotaconf es un evento SIN ANIMO DE LUCRO - la agenda y los invitados estan sujetos a cambios
 			</p>
 		</div>
 	</footer>

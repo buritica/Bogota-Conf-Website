@@ -1,5 +1,5 @@
 <div id="panelists">
-	<h2 class="title">Panelistas - 5 invitados locales.</h2>
+	<h2 class="title">Panelistas - 4 invitados locales.</h2>
 	<div class="speaker">
 		<div class="avatar gigiborja">
 			<a href="http://twitter.com/#!/gigiborja" target="_blank" class="twitter"></a>
@@ -11,7 +11,7 @@
 			<p>DevOps Manager (CTO) Colombiana para BookingMarkets (<a href="http://localo.com">Localo</a>, <a href="http://letmego.com">LetMeGo</a>, <a href="http://inbed.me">InBed</a>), residente en Bogotá.</p>
 		</div>				
 	</div>
-	<div class="speaker">
+	<!-- <div class="speaker">
 		<div class="avatar andresbarreto">
 			<a href="http://twitter.com/#!/andresbarreto" target="_blank" class="twitter"></a>
 		</div>
@@ -19,7 +19,7 @@
 			<h3 class="name">Andr&eacute;s Barreto</h3>
 			<p>Emprendedor Colombiano residente en New York. Cofundador de <a href="http://grooveshark.com/" target="_blank">Grooveshark</a>, <a href="http://onswipe.com/" target="_blank">onSwipe</a> y <a href="http://pulsosocial.com">PulsoSocial</a>.</p>
 		</div>				
-	</div>
+	</div> -->
 	<div class="speaker">
 		<div class="avatar jonathant">
 			<a href="http://twitter.com/#!/jonathant" target="_blank" class="twitter"></a>

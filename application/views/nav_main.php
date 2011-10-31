@@ -2,9 +2,11 @@
 	<div class="wrapper">
 		<?php 
 			$links = array(
+				'Agenda' => 'load-left',
+				// 'Concurso' => 'load-left',
 				'Conferencistas' => 'load-left',
 				'Panelistas' => 'load-left', 
-				'Entradas' => 'load-left',
+				// 'Entradas' => 'load-left',
 				'Organizadores' => 'load-left'
 			);
 			

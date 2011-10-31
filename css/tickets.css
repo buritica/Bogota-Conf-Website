@@ -5,7 +5,7 @@
 	}
 }
 
-#dark-green #purchase{
+#dark-green #purchase, #dark-green #contest{
 	background:colors.beige;
 	width: 320px;
 	min-height: 500px;

@@ -3,24 +3,44 @@
 class Main extends CI_Controller {	
 
 	public function index(){	
+		$this->agenda();
+	}
+	
+	public function agenda(){
 		if(!is_ajax()){
 			$data->title = 'La primera conferencia de programaci&oacute;n en Bogot&aacute;.';
 			$data->time_class = $this->day_or_night(); //css classes day or night;
 			$data->main_class = 'home'; //css classes for the body
 			$data->body_class = 'weather';
-			$data->left_content = 'speakers';
+			$data->left_content = 'agenda';
 			$data->sidebar = 'sidebar_info';
 			$data->pro_remain = $this->get_remaining_tickets(1);
 			$data->student_remain = $this->get_remaining_tickets(2);
 			$this->load->view('template/columns_animated', $data);
 		}else{
-			$this->load->view('speakers');
+			$this->load->view('agenda');
+		}	
+	}
+	
+	public function concurso(){
+		if(!is_ajax()){
+			$data->title = 'TorrenegraLabs dona una entrada';
+			$data->time_class = $this->day_or_night(); //css classes day or night;
+			$data->main_class = 'home'; //css classes for the body
+			$data->body_class = 'weather';
+			$data->left_content = 'contest';
+			$data->sidebar = 'sidebar_info';
+			$data->pro_remain = $this->get_remaining_tickets(1);
+			$data->student_remain = $this->get_remaining_tickets(2);
+			$this->load->view('template/columns_animated', $data);
+		}else{
+			$this->load->view('contest');
 		}
 	}
 	
 	public function conferencistas(){
 		if(!is_ajax()){
-			$data->title = 'La primera conferencia de programaci&oacute;n en Bogot&aacute;.';
+			$data->title = 'Conferencistas';
 			$data->time_class = $this->day_or_night(); //css classes day or night;
 			$data->main_class = 'home'; //css classes for the body
 			$data->body_class = 'weather';
@@ -323,6 +343,29 @@ class Main extends CI_Controller {
 			$this->session->set_flashdata('message',$message);
 			redirect('/');
 		}
+	}
+
+	public function enter_contest(){
+		$c = new Contestant();
+		
+		$c->name = $this->input->post('name');
+		$c->email = $this->input->post('email');
+		$c->link1 = $this->input->post('link1');
+		$c->link2 = $this->input->post('link2');
+		$c->link3 = $this->input->post('link3');
+		$c->github = $this->input->post('github');
+
+		$c->save();
+		
+		if($c->id){
+			$message = '<p>Gracias '.first_name($c->name).', hemos guardado tus datos. Mucha suerte, el viernes te diremos si ganaste.</p>';
+			$this->session->set_flashdata('message',$message);
+			redirect('/');
+		}else{
+			// redirect('/');
+			echo 'error';
+		}
+		
 	}
 
 	protected function day_or_night(){

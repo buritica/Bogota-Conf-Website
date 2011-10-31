@@ -1,0 +1,12 @@
+#agenda{
+ table{
+	background: colors.beige;
+	color: colors.darkgreen;
+	
+		td{
+			padding: 10px;
+			border-bottom: 1px solid colors.darkbeige;
+		}
+		
+	}	
+}

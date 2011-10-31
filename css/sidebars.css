@@ -71,6 +71,11 @@
 				background: url('../img/sponsor_puntoco.png') 0 0 no-repeat;
 				margin-left:65px;
 			}
+			&.monoku{
+				width: 270px;
+				height: 73px;
+				background: url('../img/sponsor_monoku.png') 0 0 no-repeat;
+			}
 		}
 		
 	}

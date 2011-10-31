@@ -75,7 +75,9 @@
 			&.agares{
 				background: url('../img/bio_agares.jpg') 0 0 no-repeat;
 			}
-
+			&.davsket{
+				background: url('../img/bio_davsket.jpg') 0 0 no-repeat;
+			}
 		}
 
 		.bio{
