@@ -26,7 +26,7 @@
 		</div>
 		<div class="bio">
 			<h3 class="name">Paul Irish</h3>
-			<h5 class="talk"> Sesión de Preguntas y Respuestas - (skype)</h5>
+			<h5 class="talk"> Five Questions with Paul Irish - (skype)</h5>
 			<p>Front-end Developer y diseñador de UX. Es parte del equipo de Relaciones de Google Chrome, al igual que el de jQuery. Miembro de <a href="http://yayquery.com/" target="_blank">yayQuery</a>, un Podcast sobre JavaScript.</p>
 			<p>Mantiene activamente varios proyectos Open Source, tales como <a href="http://modernizr.com" target="_blank">modernizr</a> y <a href="http://h5bp.com" target="_blank">html5boilerplate.</a></p>
 		</div>				

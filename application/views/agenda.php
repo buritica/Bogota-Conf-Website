@@ -36,7 +36,7 @@
 			</tr>
 			<tr>
 				<td class="time">11:30-12:00</td>
-				<td class="dec">Sesión de Preguntas y Respuestas - Paul Irish (skype)</td>
+				<td class="dec">Five questions with Paul Irish (skype)</td>
 			</tr>
 			<tr>
 				<td class="time">12:00-1:00</td>
